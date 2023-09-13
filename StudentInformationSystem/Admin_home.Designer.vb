@@ -157,6 +157,7 @@ Partial Class Admin_home
         Me.Controls.Add(Me.Pic_logout)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.Name = "Admin_home"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_home"
         CType(Me.Pic_course, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_fee, System.ComponentModel.ISupportInitialize).EndInit()

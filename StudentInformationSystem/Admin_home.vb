@@ -11,7 +11,8 @@
     End Sub
 
     Private Sub Pic_set_ting_Click(sender As Object, e As EventArgs) Handles Pic_set_ting.Click
-        MsgBox("Not designed yet.")
+        Hide()
+        Admin_changePassword.Show()
     End Sub
 
     Private Sub Pic_student_Click(sender As Object, e As EventArgs) Handles Pic_student.Click

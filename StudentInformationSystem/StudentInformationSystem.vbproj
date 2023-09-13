@@ -14,6 +14,21 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -189,6 +204,12 @@
     <Compile Include="Admin_addStudent.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Admin_changePassword.Designer.vb">
+      <DependentUpon>Admin_changePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_changePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin_Coursemngmnt.Designer.vb">
       <DependentUpon>Admin_Coursemngmnt.vb</DependentUpon>
     </Compile>
@@ -243,6 +264,7 @@
     <Compile Include="Available_courses.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="editorconfig.vb" />
     <Compile Include="Logout_confirmatiom.Designer.vb">
       <DependentUpon>Logout_confirmatiom.vb</DependentUpon>
     </Compile>
@@ -271,6 +293,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Student_change_password.Designer.vb">
+      <DependentUpon>Student_change_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Student_change_password.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student_course_view.Designer.vb">
       <DependentUpon>Student_course_view.vb</DependentUpon>
@@ -306,6 +334,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Admin_addStudent.resx">
       <DependentUpon>Admin_addStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_changePassword.resx">
+      <DependentUpon>Admin_changePassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Coursemngmnt.resx">
       <DependentUpon>Admin_Coursemngmnt.vb</DependentUpon>
@@ -345,6 +376,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student_change_password.resx">
+      <DependentUpon>Student_change_password.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_courses.resx">
       <DependentUpon>Student_courses.vb</DependentUpon>
@@ -449,6 +483,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photo_6336619316740470872_m.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vp_project.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="vp_project_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>vp_project.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

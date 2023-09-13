@@ -1,6 +1,8 @@
 ﻿Imports MySqlConnector
 '﻿Imports System.Windows
 Public Class Admin_login
+    Private Const aV As String = ""
+
     Private Sub CHKBX_showpassword_CheckedChanged(sender As Object, e As EventArgs) Handles CHKBX_showpassword.CheckedChanged
         Txt_password_admin.UseSystemPasswordChar = False = CHKBX_showpassword.Checked
         Txt_password_admin.PasswordChar = ""
@@ -13,7 +15,7 @@ Public Class Admin_login
 
     Public Sub Check()
         Try
-            Dim command As New MySqlCommand("SELECT * FROM `employee` WHERE  `admin_id` = '" & Txt_username_admin.Text & "' AND `password` = '" & Txt_password_admin.Text & "'", con)
+            Dim command As New MySqlCommand("SELECT * FROM `admin` WHERE  `admin_id` = '" & Txt_username_admin.Text & "' AND `password` = '" & Txt_password_admin.Text & "'", Con)
             Dim adapter As New MySqlDataAdapter(command)
             Dim table As New DataTable()
             adapter.Fill(table)
@@ -28,7 +30,7 @@ Public Class Admin_login
                 'globalvariables.typ = userType
                 'Me.Hide()
                 'Else userType = "Project Manager"
-                con.Close()
+                Con.Close()
                 Admin_home.Show()
                 Dim name As String = table.Rows(0)("admin_id").ToString
                 Dim pwd As String = table.Rows(0)("password").ToString
@@ -46,25 +48,28 @@ Public Class Admin_login
 
     Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles Btn_login.Click
         Try
-            If Txt_username_admin.Text = "" And Txt_password_admin.Text = "" Then
-                MsgBox("Enter data fields to login")
+            If Txt_username_admin.Text IsNot "" And Txt_password_admin.Text IsNot "" Then
+                Using table As New DataTable()
+                    Dim unused1 = New MySqlDataAdapter(New MySqlCommand(commandText:=$"SELECT `admin_id`, `password` FROM `admin` WHERE `admin_id` = '{Txt_username_admin.Text}' AND `password` = '{Txt_password_admin.Text}'", Con)).Fill(table)
+                    Select Case table.Rows.Count
+                        Case 0
+                            Dim unused3 = MessageBox.Show("Invalid Username Or Password")
+                        Case Else
+                            Txt_password_admin.Text = aV
+                            Txt_username_admin.Text = aV
+                            'Check()
+                            SIS1.Hide()
+                            Hide()
+                            Admin_home.Show()
+                    End Select
+                End Using
             Else
-                Dim command As New MySqlCommand("SELECT `admin_id`, `password` FROM `admin` WHERE `admin_id` = '" & Txt_username_admin.Text & "' AND `password` = '" & Txt_password_admin.Text & "'", con)
-                Dim adapter As New MySqlDataAdapter(command)
-                Dim table As New DataTable()
-                adapter.Fill(table)
-                If table.Rows.Count = 0 Then
-                    MessageBox.Show("Invalid Username Or Password")
-                Else
-                    Check()
-                    Me.Hide()
-                    Admin_home.Show()
-                End If
+                Dim unused2 = MsgBox("Enter data fields to login")
             End If
-        Catch ex As System.IO.IOException
-            Console.WriteLine("Exception : {0}", ex)
+        Catch ex As IO.IOException
+            Dim unused = MsgBox(ex.Message)
         Catch ex As Exception
-            Console.WriteLine("Exception : {0}", ex)
+            Dim unused4 = MsgBox(ex.Message)
         End Try
     End Sub
 

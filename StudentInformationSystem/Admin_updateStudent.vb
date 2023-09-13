@@ -16,6 +16,7 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        MsgBox("Not designed yet.")
+        Hide()
+        Admin_changePassword.Show()
     End Sub
 End Class

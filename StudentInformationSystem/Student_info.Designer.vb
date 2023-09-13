@@ -49,6 +49,7 @@ Partial Class Student_info
         Me.Panel_logout_student = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.ChkBx_see = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -311,12 +312,24 @@ Partial Class Student_info
         Me.PictureBox3.TabIndex = 36
         Me.PictureBox3.TabStop = False
         '
+        'ChkBx_see
+        '
+        Me.ChkBx_see.AutoSize = True
+        Me.ChkBx_see.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChkBx_see.Location = New System.Drawing.Point(108, 84)
+        Me.ChkBx_see.Name = "ChkBx_see"
+        Me.ChkBx_see.Size = New System.Drawing.Size(90, 21)
+        Me.ChkBx_see.TabIndex = 39
+        Me.ChkBx_see.Text = "See details"
+        Me.ChkBx_see.UseVisualStyleBackColor = True
+        '
         'Student_info
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ChkBx_see)
         Me.Controls.Add(Me.Panel_logout_student)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
@@ -382,4 +395,5 @@ Partial Class Student_info
     Friend WithEvents Panel_logout_student As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents ChkBx_see As CheckBox
 End Class

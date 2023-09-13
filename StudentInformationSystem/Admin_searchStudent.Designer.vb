@@ -23,10 +23,16 @@ Partial Class Admin_searchStudent
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel_logout_admin = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label_SIS = New System.Windows.Forms.Label()
+        Me.Txt_symbol_search = New System.Windows.Forms.TextBox()
+        Me.Label_symbolSearch = New System.Windows.Forms.Label()
+        Me.Label_ = New System.Windows.Forms.Label()
+        Me.Button_search = New System.Windows.Forms.Button()
+        Me.Dgv_search_result = New System.Windows.Forms.DataGridView()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,15 +45,63 @@ Partial Class Admin_searchStudent
         Me.Panel_logout_admin.Size = New System.Drawing.Size(190, 90)
         Me.Panel_logout_admin.TabIndex = 21
         '
-        'Label1
+        'Label_SIS
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(225, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(382, 25)
-        Me.Label1.TabIndex = 17
-        Me.Label1.Text = "STUDENT INFORMATION SYSTEM"
+        Me.Label_SIS.AutoSize = True
+        Me.Label_SIS.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_SIS.Location = New System.Drawing.Point(225, 28)
+        Me.Label_SIS.Name = "Label_SIS"
+        Me.Label_SIS.Size = New System.Drawing.Size(382, 25)
+        Me.Label_SIS.TabIndex = 17
+        Me.Label_SIS.Text = "STUDENT INFORMATION SYSTEM"
+        '
+        'Txt_symbol_search
+        '
+        Me.Txt_symbol_search.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_symbol_search.Location = New System.Drawing.Point(310, 98)
+        Me.Txt_symbol_search.Name = "Txt_symbol_search"
+        Me.Txt_symbol_search.Size = New System.Drawing.Size(148, 23)
+        Me.Txt_symbol_search.TabIndex = 22
+        '
+        'Label_symbolSearch
+        '
+        Me.Label_symbolSearch.AutoSize = True
+        Me.Label_symbolSearch.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_symbolSearch.Location = New System.Drawing.Point(218, 99)
+        Me.Label_symbolSearch.Name = "Label_symbolSearch"
+        Me.Label_symbolSearch.Size = New System.Drawing.Size(86, 17)
+        Me.Label_symbolSearch.TabIndex = 23
+        Me.Label_symbolSearch.Text = "Symbol No. :"
+        '
+        'Label_
+        '
+        Me.Label_.AutoSize = True
+        Me.Label_.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_.Location = New System.Drawing.Point(301, 69)
+        Me.Label_.Name = "Label_"
+        Me.Label_.Size = New System.Drawing.Size(148, 17)
+        Me.Label_.TabIndex = 24
+        Me.Label_.Text = "Search specific student :"
+        '
+        'Button_search
+        '
+        Me.Button_search.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Button_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_search.Location = New System.Drawing.Point(476, 92)
+        Me.Button_search.Name = "Button_search"
+        Me.Button_search.Size = New System.Drawing.Size(64, 29)
+        Me.Button_search.TabIndex = 25
+        Me.Button_search.Text = "Search"
+        Me.Button_search.UseVisualStyleBackColor = False
+        '
+        'Dgv_search_result
+        '
+        Me.Dgv_search_result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_search_result.Location = New System.Drawing.Point(12, 143)
+        Me.Dgv_search_result.Name = "Dgv_search_result"
+        Me.Dgv_search_result.Size = New System.Drawing.Size(776, 295)
+        Me.Dgv_search_result.TabIndex = 26
         '
         'PictureBox2
         '
@@ -85,14 +139,20 @@ Partial Class Admin_searchStudent
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Dgv_search_result)
+        Me.Controls.Add(Me.Button_search)
+        Me.Controls.Add(Me.Label_)
+        Me.Controls.Add(Me.Label_symbolSearch)
+        Me.Controls.Add(Me.Txt_symbol_search)
         Me.Controls.Add(Me.Panel_logout_admin)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label_SIS)
         Me.Name = "Admin_searchStudent"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_searchStudent"
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -105,5 +165,10 @@ Partial Class Admin_searchStudent
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents Label_SIS As Label
+    Friend WithEvents Txt_symbol_search As TextBox
+    Friend WithEvents Label_symbolSearch As Label
+    Friend WithEvents Label_ As Label
+    Friend WithEvents Button_search As Button
+    Friend WithEvents Dgv_search_result As DataGridView
 End Class

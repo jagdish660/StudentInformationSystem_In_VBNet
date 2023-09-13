@@ -1,48 +1,61 @@
 ﻿Imports MySqlConnector
-
 Public Class Student_login
+    'Public globalvariables As Object
+    'Public user_name As String = globalvariables.usrnm
+    'Public pass_word As String = globalvariables.psswrd
+
+    Private ReadOnly user_name As String
+
+    Public Sub New(ByVal user_name As String)
+        InitializeComponent()
+        Me.user_name = user_name
+    End Sub
+
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CHKBX_showpassword.CheckedChanged
         Txt_pwd_student.UseSystemPasswordChar = False = CHKBX_showpassword.Checked
         Txt_pwd_student.PasswordChar = ""
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Me.Hide()
+        Hide()
         SIS1.Show()
     End Sub
 
-    Private Sub Btn_login_Click(sender As Object, e As EventArgs) Handles Btn_login.Click
+    Public Sub Btn_login_Click(sender As Object, e As EventArgs) Handles Btn_login.Click
         Try
-            If Txt_usnme_student.Text = "" And Txt_pwd_student.Text = "" Then
-                MsgBox("Enter data fields to login")
+            If Txt_usnme_student.Text Is "" And Txt_pwd_student.Text Is "" Then
+                Dim unused = MsgBox("Enter data fields to login")
             Else
                 'Dim con As MySqlConnection
-                Dim command As New MySqlCommand("SELECT `admin_id`, `password` FROM `admin` WHERE `admin_id` = '" & Txt_usnme_student.Text & "' AND `password` = '" & Txt_pwd_student.Text & "'", con)
+                Dim command As New MySqlCommand("SELECT `username`, `password` FROM `student` WHERE `username` = '" & Txt_usnme_student.Text & "' AND `password` = '" & Txt_pwd_student.Text & "'", Con)
                 Dim adapter As New MySqlDataAdapter(command)
                 Dim table As New DataTable()
                 adapter.Fill(table)
-                If table.Rows.Count = 0 Then
-                    MessageBox.Show("Invalid Username Or Password")
-                Else
-                    con.Close()
-                    MessageBox.Show("Login Sucessfull!!!")
-                    SIS1.Hide()
-                    Me.Hide()
-                    Admin_home.Show()
-                End If
+                Select Case table.Rows.Count
+                    Case 0
+                        Dim unused3 = MessageBox.Show("Invalid Username Or Password")
+                    Case Else
+                        Txt_pwd_student.Text = ""
+                        Txt_usnme_student.Text = ""
+                        'Check()
+                        SIS1.Hide()
+                        Hide()
+                        Admin_home.Show()
+                End Select
 
-                If Txt_pwd_student.Text = table.Rows(0)("password").ToString And Txt_usnme_student.Text = table.Rows(0)("admin_id").ToString Then
-                    SIS1.Hide()
-                    Me.Hide()
-                    Admin_home.Show()
-                Else
-                    MessageBox.Show("Invalid Username Or Password")
-                End If
+                'If Txt_pwd_student.Text = table.Rows(0)("password").ToString And Txt_usnme_student.Text = table.Rows(0)("username").ToString Then
+                'SIS1.Hide()
+                'Hide()
+                'Student_home.Show()
+                '   Else
+                '    MessageBox.Show("Invalid Username Or Password")
+                'End If
             End If
-        Catch ex As System.IO.IOException
-            Console.WriteLine("Exception :{0}", ex)
+
+        Catch ex As MySqlException
+            Dim unused2 = MsgBox(ex.Message)
         Catch ex As Exception
-            Console.WriteLine("Exception :{0}", ex)
+            Dim unused1 = MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -71,7 +84,7 @@ Public Class Student_login
     '           End Using
     '       End If
     '   Catch ex As Exception
-    '       MessageBox.Show("An error occurred: " & ex.Message)
+    '       MsgBox(ex.Message)
     '   End Try
     'End Sub
 

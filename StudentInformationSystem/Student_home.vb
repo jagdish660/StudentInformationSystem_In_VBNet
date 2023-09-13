@@ -1,4 +1,13 @@
 ﻿Public Class Student_home
+    Private ReadOnly user_name As String
+
+    Public Sub New()
+    End Sub
+
+    Public Sub New(user_name As String)
+        Me.user_name = user_name
+    End Sub
+
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         SwitchPanel(Logout_confirmatiom)
     End Sub
@@ -11,12 +20,14 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        MsgBox("Not designed yet.")
+        Hide()
+        Student_change_password.Show()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Dim form2 As New Student_info(user_name)
         Me.Hide()
-        Student_info.Show()
+        form2.Show()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
