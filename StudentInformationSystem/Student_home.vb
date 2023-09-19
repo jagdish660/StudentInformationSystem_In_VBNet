@@ -1,13 +1,6 @@
-﻿Public Class Student_home
-    Private ReadOnly user_name As String
-
-    Public Sub New()
-    End Sub
-
-    Public Sub New(user_name As String)
-        Me.user_name = user_name
-    End Sub
-
+﻿Public Class Student_home1
+    Public Property User_name As String
+    Public username__ As String = User_name
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         SwitchPanel(Logout_confirmatiom)
     End Sub
@@ -20,18 +13,27 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        Hide()
-        Student_change_password.Show()
+        Dim obj As New Student_change_password
+        Me.Hide()
+        obj.User_name_ = User_name
+        obj.Show()
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
-        Dim form2 As New Student_info(user_name)
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox_myInfo.Click
+        Dim obj1 As New Student_info
         Me.Hide()
-        form2.Show()
+        obj1.User_name = User_name
+        obj1.Show()
     End Sub
 
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox_course.Click
+        Dim obj As New Student_courses
         Me.Hide()
-        Student_courses.Show()
+        obj.user__name = User_name
+        obj.Show()
+    End Sub
+
+    Private Sub Student_home1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

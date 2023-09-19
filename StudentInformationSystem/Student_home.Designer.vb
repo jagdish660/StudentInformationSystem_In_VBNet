@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Student_home
+Partial Class Student_home1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -27,12 +27,12 @@ Partial Class Student_home
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_course = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_myInfo = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_course, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_myInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -85,25 +85,25 @@ Partial Class Student_home
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Welcome! "
         '
-        'PictureBox4
+        'PictureBox_course
         '
-        Me.PictureBox4.Image = Global.StudentInformationSystem.My.Resources.Resources.courses
-        Me.PictureBox4.Location = New System.Drawing.Point(54, 208)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(101, 83)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 8
-        Me.PictureBox4.TabStop = False
+        Me.PictureBox_course.Image = Global.StudentInformationSystem.My.Resources.Resources.courses
+        Me.PictureBox_course.Location = New System.Drawing.Point(54, 208)
+        Me.PictureBox_course.Name = "PictureBox_course"
+        Me.PictureBox_course.Size = New System.Drawing.Size(101, 83)
+        Me.PictureBox_course.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_course.TabIndex = 8
+        Me.PictureBox_course.TabStop = False
         '
-        'PictureBox3
+        'PictureBox_myInfo
         '
-        Me.PictureBox3.Image = Global.StudentInformationSystem.My.Resources.Resources.images
-        Me.PictureBox3.Location = New System.Drawing.Point(54, 119)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(101, 83)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 7
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox_myInfo.Image = Global.StudentInformationSystem.My.Resources.Resources.images
+        Me.PictureBox_myInfo.Location = New System.Drawing.Point(54, 119)
+        Me.PictureBox_myInfo.Name = "PictureBox_myInfo"
+        Me.PictureBox_myInfo.Size = New System.Drawing.Size(101, 83)
+        Me.PictureBox_myInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_myInfo.TabIndex = 7
+        Me.PictureBox_myInfo.TabStop = False
         '
         'PictureBox2
         '
@@ -125,7 +125,7 @@ Partial Class Student_home
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
-        'Student_home
+        'Student_home1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -134,17 +134,17 @@ Partial Class Student_home
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox_course)
+        Me.Controls.Add(Me.PictureBox_myInfo)
         Me.Controls.Add(Me.Panel_logout_student)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Student_home"
+        Me.Name = "Student_home1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student_home"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_course, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_myInfo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -156,8 +156,8 @@ Partial Class Student_home
     Friend WithEvents Panel_logout_student As Panel
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents PictureBox_myInfo As PictureBox
+    Friend WithEvents PictureBox_course As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label

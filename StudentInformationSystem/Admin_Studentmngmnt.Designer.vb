@@ -36,14 +36,12 @@ Partial Class Admin_Studentmngmnt
         Me.Pic_removeStudent = New System.Windows.Forms.PictureBox()
         Me.Pic_updateStudent = New System.Windows.Forms.PictureBox()
         Me.Pic_addnewStudent = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Pic_back = New System.Windows.Forms.PictureBox()
         CType(Me.Pic_searchStudent, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_removeStudent, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_updateStudent, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_addnewStudent, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_back, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -195,16 +193,6 @@ Partial Class Admin_Studentmngmnt
         Me.Pic_addnewStudent.TabIndex = 24
         Me.Pic_addnewStudent.TabStop = False
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.StudentInformationSystem.My.Resources.Resources.png_transparent_computer_icons_service_technology_setting_miscellaneous_service_business_thumbnail
-        Me.PictureBox2.Location = New System.Drawing.Point(700, 48)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 18
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.StudentInformationSystem.My.Resources.Resources.images__1_
@@ -244,7 +232,6 @@ Partial Class Admin_Studentmngmnt
         Me.Controls.Add(Me.Button_Studentmngmnt)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Panel_logout_admin)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Pic_back)
         Me.Controls.Add(Me.Label_SIS)
@@ -255,7 +242,6 @@ Partial Class Admin_Studentmngmnt
         CType(Me.Pic_removeStudent, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_updateStudent, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_addnewStudent, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_back, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -266,7 +252,6 @@ Partial Class Admin_Studentmngmnt
     Friend WithEvents Pic_back As PictureBox
     Friend WithEvents Label_SIS As Label
     Friend WithEvents Panel_logout_admin As Panel
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button_Studentmngmnt As Button

@@ -47,11 +47,10 @@ Partial Class Student_info
         Me.Txt_faculty = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel_logout_student = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.ChkBx_see = New System.Windows.Forms.CheckBox()
+        Me.Txt_username = New System.Windows.Forms.TextBox()
+        Me.Label_username = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -89,7 +88,7 @@ Partial Class Student_info
         '
         Me.Label_mobile.AutoSize = True
         Me.Label_mobile.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_mobile.Location = New System.Drawing.Point(421, 146)
+        Me.Label_mobile.Location = New System.Drawing.Point(421, 176)
         Me.Label_mobile.Name = "Label_mobile"
         Me.Label_mobile.Size = New System.Drawing.Size(81, 17)
         Me.Label_mobile.TabIndex = 16
@@ -99,7 +98,7 @@ Partial Class Student_info
         '
         Me.Label_faculty.AutoSize = True
         Me.Label_faculty.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_faculty.Location = New System.Drawing.Point(421, 213)
+        Me.Label_faculty.Location = New System.Drawing.Point(421, 243)
         Me.Label_faculty.Name = "Label_faculty"
         Me.Label_faculty.Size = New System.Drawing.Size(54, 17)
         Me.Label_faculty.TabIndex = 17
@@ -109,7 +108,7 @@ Partial Class Student_info
         '
         Me.Label_program.AutoSize = True
         Me.Label_program.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_program.Location = New System.Drawing.Point(421, 243)
+        Me.Label_program.Location = New System.Drawing.Point(421, 273)
         Me.Label_program.Name = "Label_program"
         Me.Label_program.Size = New System.Drawing.Size(70, 17)
         Me.Label_program.TabIndex = 18
@@ -119,7 +118,7 @@ Partial Class Student_info
         '
         Me.Label_registration.AutoSize = True
         Me.Label_registration.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_registration.Location = New System.Drawing.Point(421, 117)
+        Me.Label_registration.Location = New System.Drawing.Point(421, 150)
         Me.Label_registration.Name = "Label_registration"
         Me.Label_registration.Size = New System.Drawing.Size(110, 17)
         Me.Label_registration.TabIndex = 19
@@ -139,7 +138,7 @@ Partial Class Student_info
         '
         Me.Label_phone.AutoSize = True
         Me.Label_phone.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_phone.Location = New System.Drawing.Point(421, 179)
+        Me.Label_phone.Location = New System.Drawing.Point(421, 209)
         Me.Label_phone.Name = "Label_phone"
         Me.Label_phone.Size = New System.Drawing.Size(76, 17)
         Me.Label_phone.TabIndex = 21
@@ -180,6 +179,7 @@ Partial Class Student_info
         Me.Txt_symbol.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_symbol.Location = New System.Drawing.Point(193, 111)
         Me.Txt_symbol.Name = "Txt_symbol"
+        Me.Txt_symbol.ReadOnly = True
         Me.Txt_symbol.Size = New System.Drawing.Size(192, 23)
         Me.Txt_symbol.TabIndex = 25
         Me.Txt_symbol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -187,8 +187,9 @@ Partial Class Student_info
         'Txt_registrstion
         '
         Me.Txt_registrstion.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_registrstion.Location = New System.Drawing.Point(530, 111)
+        Me.Txt_registrstion.Location = New System.Drawing.Point(530, 144)
         Me.Txt_registrstion.Name = "Txt_registrstion"
+        Me.Txt_registrstion.ReadOnly = True
         Me.Txt_registrstion.Size = New System.Drawing.Size(173, 23)
         Me.Txt_registrstion.TabIndex = 26
         Me.Txt_registrstion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -198,6 +199,7 @@ Partial Class Student_info
         Me.Txt_name.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_name.Location = New System.Drawing.Point(193, 143)
         Me.Txt_name.Name = "Txt_name"
+        Me.Txt_name.ReadOnly = True
         Me.Txt_name.Size = New System.Drawing.Size(192, 23)
         Me.Txt_name.TabIndex = 27
         Me.Txt_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -205,8 +207,9 @@ Partial Class Student_info
         'Txt_mobile
         '
         Me.Txt_mobile.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_mobile.Location = New System.Drawing.Point(530, 143)
+        Me.Txt_mobile.Location = New System.Drawing.Point(530, 176)
         Me.Txt_mobile.Name = "Txt_mobile"
+        Me.Txt_mobile.ReadOnly = True
         Me.Txt_mobile.Size = New System.Drawing.Size(173, 23)
         Me.Txt_mobile.TabIndex = 28
         Me.Txt_mobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -216,6 +219,7 @@ Partial Class Student_info
         Me.Txt_address.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_address.Location = New System.Drawing.Point(193, 176)
         Me.Txt_address.Name = "Txt_address"
+        Me.Txt_address.ReadOnly = True
         Me.Txt_address.Size = New System.Drawing.Size(192, 23)
         Me.Txt_address.TabIndex = 29
         Me.Txt_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -225,6 +229,7 @@ Partial Class Student_info
         Me.Txt_DOB.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_DOB.Location = New System.Drawing.Point(193, 210)
         Me.Txt_DOB.Name = "Txt_DOB"
+        Me.Txt_DOB.ReadOnly = True
         Me.Txt_DOB.Size = New System.Drawing.Size(192, 23)
         Me.Txt_DOB.TabIndex = 30
         Me.Txt_DOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -234,6 +239,7 @@ Partial Class Student_info
         Me.Txt_level.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_level.Location = New System.Drawing.Point(193, 240)
         Me.Txt_level.Name = "Txt_level"
+        Me.Txt_level.ReadOnly = True
         Me.Txt_level.Size = New System.Drawing.Size(192, 23)
         Me.Txt_level.TabIndex = 31
         Me.Txt_level.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -241,8 +247,9 @@ Partial Class Student_info
         'Txt_phone
         '
         Me.Txt_phone.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_phone.Location = New System.Drawing.Point(530, 176)
+        Me.Txt_phone.Location = New System.Drawing.Point(530, 209)
         Me.Txt_phone.Name = "Txt_phone"
+        Me.Txt_phone.ReadOnly = True
         Me.Txt_phone.Size = New System.Drawing.Size(173, 23)
         Me.Txt_phone.TabIndex = 32
         Me.Txt_phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -252,6 +259,7 @@ Partial Class Student_info
         Me.Txt_semester.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Txt_semester.Location = New System.Drawing.Point(193, 271)
         Me.Txt_semester.Name = "Txt_semester"
+        Me.Txt_semester.ReadOnly = True
         Me.Txt_semester.Size = New System.Drawing.Size(192, 23)
         Me.Txt_semester.TabIndex = 33
         Me.Txt_semester.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -259,18 +267,19 @@ Partial Class Student_info
         'Txt_program
         '
         Me.Txt_program.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_program.Location = New System.Drawing.Point(530, 240)
+        Me.Txt_program.Location = New System.Drawing.Point(530, 274)
         Me.Txt_program.Name = "Txt_program"
+        Me.Txt_program.ReadOnly = True
         Me.Txt_program.Size = New System.Drawing.Size(173, 23)
         Me.Txt_program.TabIndex = 34
-        Me.Txt_program.Text = "Bachelors"
         Me.Txt_program.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Txt_faculty
         '
         Me.Txt_faculty.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_faculty.Location = New System.Drawing.Point(530, 210)
+        Me.Txt_faculty.Location = New System.Drawing.Point(530, 243)
         Me.Txt_faculty.Name = "Txt_faculty"
+        Me.Txt_faculty.ReadOnly = True
         Me.Txt_faculty.Size = New System.Drawing.Size(173, 23)
         Me.Txt_faculty.TabIndex = 35
         Me.Txt_faculty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -292,16 +301,6 @@ Partial Class Student_info
         Me.Panel_logout_student.Size = New System.Drawing.Size(190, 90)
         Me.Panel_logout_student.TabIndex = 38
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.StudentInformationSystem.My.Resources.Resources.png_transparent_computer_icons_service_technology_setting_miscellaneous_service_business_thumbnail
-        Me.PictureBox2.Location = New System.Drawing.Point(694, 48)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(26, 27)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 37
-        Me.PictureBox2.TabStop = False
-        '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.StudentInformationSystem.My.Resources.Resources.images__1_
@@ -312,16 +311,25 @@ Partial Class Student_info
         Me.PictureBox3.TabIndex = 36
         Me.PictureBox3.TabStop = False
         '
-        'ChkBx_see
+        'Txt_username
         '
-        Me.ChkBx_see.AutoSize = True
-        Me.ChkBx_see.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChkBx_see.Location = New System.Drawing.Point(108, 84)
-        Me.ChkBx_see.Name = "ChkBx_see"
-        Me.ChkBx_see.Size = New System.Drawing.Size(90, 21)
-        Me.ChkBx_see.TabIndex = 39
-        Me.ChkBx_see.Text = "See details"
-        Me.ChkBx_see.UseVisualStyleBackColor = True
+        Me.Txt_username.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_username.Location = New System.Drawing.Point(530, 111)
+        Me.Txt_username.Name = "Txt_username"
+        Me.Txt_username.ReadOnly = True
+        Me.Txt_username.Size = New System.Drawing.Size(173, 23)
+        Me.Txt_username.TabIndex = 41
+        Me.Txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label_username
+        '
+        Me.Label_username.AutoSize = True
+        Me.Label_username.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_username.Location = New System.Drawing.Point(423, 117)
+        Me.Label_username.Name = "Label_username"
+        Me.Label_username.Size = New System.Drawing.Size(74, 17)
+        Me.Label_username.TabIndex = 40
+        Me.Label_username.Text = "Username :"
         '
         'Student_info
         '
@@ -329,9 +337,8 @@ Partial Class Student_info
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.ChkBx_see)
-        Me.Controls.Add(Me.Panel_logout_student)
-        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Txt_username)
+        Me.Controls.Add(Me.Label_username)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Txt_faculty)
         Me.Controls.Add(Me.Txt_program)
@@ -357,11 +364,11 @@ Partial Class Student_info
         Me.Controls.Add(Me.Lbl_symbol)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label_SIS)
+        Me.Controls.Add(Me.Panel_logout_student)
         Me.Name = "Student_info"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student_info"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -393,7 +400,7 @@ Partial Class Student_info
     Friend WithEvents Txt_program As TextBox
     Friend WithEvents Txt_faculty As TextBox
     Friend WithEvents Panel_logout_student As Panel
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents ChkBx_see As CheckBox
+    Friend WithEvents Txt_username As TextBox
+    Friend WithEvents Label_username As Label
 End Class

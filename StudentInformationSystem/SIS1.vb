@@ -5,6 +5,7 @@
         If List1.SelectedItem IsNot Nothing AndAlso List1.SelectedItem.ToString() = "Admin" Then
             SwitchPanel(Admin_login)
         Else
+
             SwitchPanel(form2)
         End If
     End Sub

@@ -258,12 +258,6 @@
     <Compile Include="Admin_updateStudent.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Available_courses.Designer.vb">
-      <DependentUpon>Available_courses.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Available_courses.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="editorconfig.vb" />
     <Compile Include="Logout_confirmatiom.Designer.vb">
       <DependentUpon>Logout_confirmatiom.vb</DependentUpon>
@@ -298,12 +292,6 @@
       <DependentUpon>Student_change_password.vb</DependentUpon>
     </Compile>
     <Compile Include="Student_change_password.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student_course_view.Designer.vb">
-      <DependentUpon>Student_course_view.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Student_course_view.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student_courses.Designer.vb">
@@ -362,9 +350,6 @@
     <EmbeddedResource Include="Admin_updateStudent.resx">
       <DependentUpon>Admin_updateStudent.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Available_courses.resx">
-      <DependentUpon>Available_courses.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Logout_confirmatiom.resx">
       <DependentUpon>Logout_confirmatiom.vb</DependentUpon>
     </EmbeddedResource>
@@ -382,9 +367,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Student_courses.resx">
       <DependentUpon>Student_courses.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Student_course_view.resx">
-      <DependentUpon>Student_course_view.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_home.resx">
       <DependentUpon>Student_home.vb</DependentUpon>
@@ -485,15 +467,6 @@
     <None Include="Resources\photo_6336619316740470872_m.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="vp_project.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="vp_project_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>vp_project.mdf</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
@@ -504,6 +477,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -22,34 +22,40 @@ Partial Class Student_courses
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label_SIS = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_enrolled = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_fee = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_courses = New System.Windows.Forms.PictureBox()
+        Me.PictureBox_back = New System.Windows.Forms.PictureBox()
         Me.Panel_logout_student = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox_logout = New System.Windows.Forms.PictureBox()
+        Me.DGV_enrolled_Courses = New System.Windows.Forms.DataGridView()
+        Me.Label_course = New System.Windows.Forms.Label()
+        Me.Label_fee = New System.Windows.Forms.Label()
+        Me.Dgv_available_courses = New System.Windows.Forms.DataGridView()
+        Me.Dgv_fee = New System.Windows.Forms.DataGridView()
+        CType(Me.PictureBox_enrolled, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_fee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_courses, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_back, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox_logout, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DGV_enrolled_Courses, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_available_courses, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_fee, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'Label_SIS
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(225, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(382, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "STUDENT INFORMATION SYSTEM"
+        Me.Label_SIS.AutoSize = True
+        Me.Label_SIS.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_SIS.Location = New System.Drawing.Point(225, 28)
+        Me.Label_SIS.Name = "Label_SIS"
+        Me.Label_SIS.Size = New System.Drawing.Size(382, 25)
+        Me.Label_SIS.TabIndex = 1
+        Me.Label_SIS.Text = "STUDENT INFORMATION SYSTEM"
         '
         'Label2
         '
@@ -81,45 +87,45 @@ Partial Class Student_courses
         Me.Label4.TabIndex = 19
         Me.Label4.Text = "Fee details"
         '
-        'PictureBox4
+        'PictureBox_enrolled
         '
-        Me.PictureBox4.Image = Global.StudentInformationSystem.My.Resources.Resources._309_3099036_completed_course_finished_work_icon_download
-        Me.PictureBox4.Location = New System.Drawing.Point(68, 115)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(100, 63)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 16
-        Me.PictureBox4.TabStop = False
+        Me.PictureBox_enrolled.Image = Global.StudentInformationSystem.My.Resources.Resources._309_3099036_completed_course_finished_work_icon_download
+        Me.PictureBox_enrolled.Location = New System.Drawing.Point(68, 115)
+        Me.PictureBox_enrolled.Name = "PictureBox_enrolled"
+        Me.PictureBox_enrolled.Size = New System.Drawing.Size(100, 63)
+        Me.PictureBox_enrolled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_enrolled.TabIndex = 16
+        Me.PictureBox_enrolled.TabStop = False
         '
-        'PictureBox3
+        'PictureBox_fee
         '
-        Me.PictureBox3.Image = Global.StudentInformationSystem.My.Resources.Resources._61_616906_ticket_icon_png_tickets_icon_transparent_png
-        Me.PictureBox3.Location = New System.Drawing.Point(68, 254)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(100, 63)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 15
-        Me.PictureBox3.TabStop = False
+        Me.PictureBox_fee.Image = Global.StudentInformationSystem.My.Resources.Resources._61_616906_ticket_icon_png_tickets_icon_transparent_png
+        Me.PictureBox_fee.Location = New System.Drawing.Point(68, 254)
+        Me.PictureBox_fee.Name = "PictureBox_fee"
+        Me.PictureBox_fee.Size = New System.Drawing.Size(100, 63)
+        Me.PictureBox_fee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_fee.TabIndex = 15
+        Me.PictureBox_fee.TabStop = False
         '
-        'PictureBox2
+        'PictureBox_courses
         '
-        Me.PictureBox2.Image = Global.StudentInformationSystem.My.Resources.Resources.courses2
-        Me.PictureBox2.Location = New System.Drawing.Point(68, 184)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 63)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 14
-        Me.PictureBox2.TabStop = False
+        Me.PictureBox_courses.Image = Global.StudentInformationSystem.My.Resources.Resources.courses2
+        Me.PictureBox_courses.Location = New System.Drawing.Point(68, 184)
+        Me.PictureBox_courses.Name = "PictureBox_courses"
+        Me.PictureBox_courses.Size = New System.Drawing.Size(100, 63)
+        Me.PictureBox_courses.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_courses.TabIndex = 14
+        Me.PictureBox_courses.TabStop = False
         '
-        'PictureBox1
+        'PictureBox_back
         '
-        Me.PictureBox1.Image = Global.StudentInformationSystem.My.Resources.Resources.pngtree_back_vector_icon_png_image_470452
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 69)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(32, 30)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 13
-        Me.PictureBox1.TabStop = False
+        Me.PictureBox_back.Image = Global.StudentInformationSystem.My.Resources.Resources.pngtree_back_vector_icon_png_image_470452
+        Me.PictureBox_back.Location = New System.Drawing.Point(12, 69)
+        Me.PictureBox_back.Name = "PictureBox_back"
+        Me.PictureBox_back.Size = New System.Drawing.Size(32, 30)
+        Me.PictureBox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_back.TabIndex = 13
+        Me.PictureBox_back.TabStop = False
         '
         'Panel_logout_student
         '
@@ -128,25 +134,73 @@ Partial Class Student_courses
         Me.Panel_logout_student.Size = New System.Drawing.Size(190, 90)
         Me.Panel_logout_student.TabIndex = 22
         '
-        'PictureBox5
+        'PictureBox_logout
         '
-        Me.PictureBox5.Image = Global.StudentInformationSystem.My.Resources.Resources.png_transparent_computer_icons_service_technology_setting_miscellaneous_service_business_thumbnail
-        Me.PictureBox5.Location = New System.Drawing.Point(697, 49)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(26, 27)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 21
-        Me.PictureBox5.TabStop = False
+        Me.PictureBox_logout.Image = Global.StudentInformationSystem.My.Resources.Resources.images__1_
+        Me.PictureBox_logout.Location = New System.Drawing.Point(661, 49)
+        Me.PictureBox_logout.Name = "PictureBox_logout"
+        Me.PictureBox_logout.Size = New System.Drawing.Size(30, 27)
+        Me.PictureBox_logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox_logout.TabIndex = 20
+        Me.PictureBox_logout.TabStop = False
         '
-        'PictureBox6
+        'DGV_enrolled_Courses
         '
-        Me.PictureBox6.Image = Global.StudentInformationSystem.My.Resources.Resources.images__1_
-        Me.PictureBox6.Location = New System.Drawing.Point(661, 49)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(30, 27)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 20
-        Me.PictureBox6.TabStop = False
+        Me.DGV_enrolled_Courses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DGV_enrolled_Courses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.DGV_enrolled_Courses.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.DGV_enrolled_Courses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DGV_enrolled_Courses.Location = New System.Drawing.Point(207, 165)
+        Me.DGV_enrolled_Courses.Name = "DGV_enrolled_Courses"
+        Me.DGV_enrolled_Courses.Size = New System.Drawing.Size(572, 273)
+        Me.DGV_enrolled_Courses.TabIndex = 23
+        Me.DGV_enrolled_Courses.Visible = False
+        '
+        'Label_course
+        '
+        Me.Label_course.AutoSize = True
+        Me.Label_course.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_course.Location = New System.Drawing.Point(204, 115)
+        Me.Label_course.Name = "Label_course"
+        Me.Label_course.Size = New System.Drawing.Size(63, 17)
+        Me.Label_course.TabIndex = 24
+        Me.Label_course.Text = "Courses :"
+        Me.Label_course.Visible = False
+        '
+        'Label_fee
+        '
+        Me.Label_fee.AutoSize = True
+        Me.Label_fee.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_fee.Location = New System.Drawing.Point(204, 115)
+        Me.Label_fee.Name = "Label_fee"
+        Me.Label_fee.Size = New System.Drawing.Size(36, 17)
+        Me.Label_fee.TabIndex = 27
+        Me.Label_fee.Text = "FEE :"
+        Me.Label_fee.Visible = False
+        '
+        'Dgv_available_courses
+        '
+        Me.Dgv_available_courses.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Dgv_available_courses.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.Dgv_available_courses.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Dgv_available_courses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_available_courses.Location = New System.Drawing.Point(207, 165)
+        Me.Dgv_available_courses.Name = "Dgv_available_courses"
+        Me.Dgv_available_courses.Size = New System.Drawing.Size(572, 284)
+        Me.Dgv_available_courses.TabIndex = 25
+        Me.Dgv_available_courses.Visible = False
+        '
+        'Dgv_fee
+        '
+        Me.Dgv_fee.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Dgv_fee.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.Dgv_fee.BackgroundColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Dgv_fee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_fee.Location = New System.Drawing.Point(207, 165)
+        Me.Dgv_fee.Name = "Dgv_fee"
+        Me.Dgv_fee.Size = New System.Drawing.Size(572, 82)
+        Me.Dgv_fee.TabIndex = 28
+        Me.Dgv_fee.Visible = False
         '
         'Student_courses
         '
@@ -154,40 +208,50 @@ Partial Class Student_courses
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Dgv_fee)
+        Me.Controls.Add(Me.Label_fee)
+        Me.Controls.Add(Me.Dgv_available_courses)
+        Me.Controls.Add(Me.Label_course)
+        Me.Controls.Add(Me.DGV_enrolled_Courses)
         Me.Controls.Add(Me.Panel_logout_student)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBox_logout)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.PictureBox_enrolled)
+        Me.Controls.Add(Me.PictureBox_fee)
+        Me.Controls.Add(Me.PictureBox_courses)
+        Me.Controls.Add(Me.PictureBox_back)
+        Me.Controls.Add(Me.Label_SIS)
         Me.Name = "Student_courses"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student_courses"
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_enrolled, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_fee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_courses, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_back, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox_logout, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DGV_enrolled_Courses, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_available_courses, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_fee, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label_SIS As Label
+    Friend WithEvents PictureBox_back As PictureBox
+    Friend WithEvents PictureBox_courses As PictureBox
+    Friend WithEvents PictureBox_fee As PictureBox
+    Friend WithEvents PictureBox_enrolled As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel_logout_student As Panel
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents PictureBox_logout As PictureBox
+    Friend WithEvents DGV_enrolled_Courses As DataGridView
+    Friend WithEvents Label_course As Label
+    Friend WithEvents Label_fee As Label
+    Friend WithEvents Dgv_available_courses As DataGridView
+    Friend WithEvents Dgv_fee As DataGridView
 End Class

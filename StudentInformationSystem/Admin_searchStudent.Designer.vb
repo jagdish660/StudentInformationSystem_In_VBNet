@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin_searchStudent
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Admin_searchStudent
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel_logout_admin = New System.Windows.Forms.Panel()
         Me.Label_SIS = New System.Windows.Forms.Label()
@@ -28,14 +28,12 @@ Partial Class Admin_searchStudent
         Me.Label_symbolSearch = New System.Windows.Forms.Label()
         Me.Label_ = New System.Windows.Forms.Label()
         Me.Button_search = New System.Windows.Forms.Button()
-        Me.Dgv_search_result = New System.Windows.Forms.DataGridView()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Dgv_search_result = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel_logout_admin
@@ -58,20 +56,20 @@ Partial Class Admin_searchStudent
         'Txt_symbol_search
         '
         Me.Txt_symbol_search.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_symbol_search.Location = New System.Drawing.Point(310, 98)
+        Me.Txt_symbol_search.Location = New System.Drawing.Point(384, 98)
         Me.Txt_symbol_search.Name = "Txt_symbol_search"
-        Me.Txt_symbol_search.Size = New System.Drawing.Size(148, 23)
+        Me.Txt_symbol_search.Size = New System.Drawing.Size(129, 23)
         Me.Txt_symbol_search.TabIndex = 22
         '
         'Label_symbolSearch
         '
         Me.Label_symbolSearch.AutoSize = True
         Me.Label_symbolSearch.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_symbolSearch.Location = New System.Drawing.Point(218, 99)
+        Me.Label_symbolSearch.Location = New System.Drawing.Point(208, 101)
         Me.Label_symbolSearch.Name = "Label_symbolSearch"
-        Me.Label_symbolSearch.Size = New System.Drawing.Size(86, 17)
+        Me.Label_symbolSearch.Size = New System.Drawing.Size(168, 17)
         Me.Label_symbolSearch.TabIndex = 23
-        Me.Label_symbolSearch.Text = "Symbol No. :"
+        Me.Label_symbolSearch.Text = "Username or Symbol No. :"
         '
         'Label_
         '
@@ -87,31 +85,12 @@ Partial Class Admin_searchStudent
         '
         Me.Button_search.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.Button_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_search.Location = New System.Drawing.Point(476, 92)
+        Me.Button_search.Location = New System.Drawing.Point(519, 94)
         Me.Button_search.Name = "Button_search"
         Me.Button_search.Size = New System.Drawing.Size(64, 29)
         Me.Button_search.TabIndex = 25
         Me.Button_search.Text = "Search"
         Me.Button_search.UseVisualStyleBackColor = False
-        '
-        'Dgv_search_result
-        '
-        Me.Dgv_search_result.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.Dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgv_search_result.Location = New System.Drawing.Point(12, 143)
-        Me.Dgv_search_result.Name = "Dgv_search_result"
-        Me.Dgv_search_result.Size = New System.Drawing.Size(776, 295)
-        Me.Dgv_search_result.TabIndex = 26
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.StudentInformationSystem.My.Resources.Resources.png_transparent_computer_icons_service_technology_setting_miscellaneous_service_business_thumbnail
-        Me.PictureBox2.Location = New System.Drawing.Point(700, 48)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
@@ -133,6 +112,15 @@ Partial Class Admin_searchStudent
         Me.PictureBox1.TabIndex = 18
         Me.PictureBox1.TabStop = False
         '
+        'Dgv_search_result
+        '
+        Me.Dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_search_result.Location = New System.Drawing.Point(12, 156)
+        Me.Dgv_search_result.Name = "Dgv_search_result"
+        Me.Dgv_search_result.Size = New System.Drawing.Size(776, 169)
+        Me.Dgv_search_result.TabIndex = 27
+        Me.Dgv_search_result.Visible = False
+        '
         'Admin_searchStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -145,24 +133,21 @@ Partial Class Admin_searchStudent
         Me.Controls.Add(Me.Label_symbolSearch)
         Me.Controls.Add(Me.Txt_symbol_search)
         Me.Controls.Add(Me.Panel_logout_admin)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label_SIS)
         Me.Name = "Admin_searchStudent"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_searchStudent"
-        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Panel_logout_admin As Panel
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label_SIS As Label

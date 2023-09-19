@@ -24,7 +24,6 @@ Partial Class Admin_addStudent
     Private Sub InitializeComponent()
         Me.Panel_logout_admin = New System.Windows.Forms.Panel()
         Me.Label_SIS = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.LabelSymbol = New System.Windows.Forms.Label()
@@ -45,21 +44,34 @@ Partial Class Admin_addStudent
         Me.TXT_Symbol = New System.Windows.Forms.TextBox()
         Me.TXT_username = New System.Windows.Forms.TextBox()
         Me.TXT_Address = New System.Windows.Forms.TextBox()
-        Me.TXT_faculty = New System.Windows.Forms.TextBox()
         Me.TXT_mobile = New System.Windows.Forms.TextBox()
         Me.TXT_phone = New System.Windows.Forms.TextBox()
-        Me.TXT_DOB = New System.Windows.Forms.TextBox()
         Me.TXT_password = New System.Windows.Forms.TextBox()
         Me.TXT_Name = New System.Windows.Forms.TextBox()
         Me.TXT_Registrstion = New System.Windows.Forms.TextBox()
-        Me.TXT_semester = New System.Windows.Forms.TextBox()
         Me.TXT_fee = New System.Windows.Forms.TextBox()
-        Me.TXT_discount = New System.Windows.Forms.TextBox()
-        Me.TXT_program = New System.Windows.Forms.TextBox()
-        Me.TXT_level = New System.Windows.Forms.TextBox()
         Me.Button_Submit = New System.Windows.Forms.Button()
         Me.Button_reset = New System.Windows.Forms.Button()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ComboBox_faculty = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_semester = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_program = New System.Windows.Forms.ComboBox()
+        Me.ComboBox_level = New System.Windows.Forms.ComboBox()
+        Me.Label_DOB_DETAIL = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Dtp_DOB = New System.Windows.Forms.DateTimePicker()
+        Me.Txt_discount = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,16 +92,6 @@ Partial Class Admin_addStudent
         Me.Label_SIS.Size = New System.Drawing.Size(382, 25)
         Me.Label_SIS.TabIndex = 17
         Me.Label_SIS.Text = "STUDENT INFORMATION SYSTEM"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.StudentInformationSystem.My.Resources.Resources.png_transparent_computer_icons_service_technology_setting_miscellaneous_service_business_thumbnail
-        Me.PictureBox2.Location = New System.Drawing.Point(700, 48)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 20
-        Me.PictureBox2.TabStop = False
         '
         'PictureBox3
         '
@@ -185,7 +187,7 @@ Partial Class Admin_addStudent
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(446, 286)
+        Me.Label9.Location = New System.Drawing.Point(446, 257)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(69, 17)
         Me.Label9.TabIndex = 30
@@ -195,7 +197,7 @@ Partial Class Admin_addStudent
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(63, 327)
+        Me.Label10.Location = New System.Drawing.Point(63, 321)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(89, 17)
         Me.Label10.TabIndex = 31
@@ -205,7 +207,7 @@ Partial Class Admin_addStudent
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(446, 319)
+        Me.Label11.Location = New System.Drawing.Point(446, 290)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(35, 17)
         Me.Label11.TabIndex = 32
@@ -215,7 +217,7 @@ Partial Class Admin_addStudent
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(446, 185)
+        Me.Label12.Location = New System.Drawing.Point(446, 156)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(54, 17)
         Me.Label12.TabIndex = 33
@@ -225,7 +227,7 @@ Partial Class Admin_addStudent
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(446, 217)
+        Me.Label13.Location = New System.Drawing.Point(446, 188)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(44, 17)
         Me.Label13.TabIndex = 34
@@ -235,7 +237,7 @@ Partial Class Admin_addStudent
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(446, 252)
+        Me.Label14.Location = New System.Drawing.Point(446, 223)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(66, 17)
         Me.Label14.TabIndex = 35
@@ -245,7 +247,7 @@ Partial Class Admin_addStudent
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(446, 152)
+        Me.Label15.Location = New System.Drawing.Point(446, 123)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(56, 17)
         Me.Label15.TabIndex = 36
@@ -255,7 +257,7 @@ Partial Class Admin_addStudent
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(446, 354)
+        Me.Label1.Location = New System.Drawing.Point(446, 325)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 17)
         Me.Label1.TabIndex = 37
@@ -264,7 +266,7 @@ Partial Class Admin_addStudent
         'TXT_Symbol
         '
         Me.TXT_Symbol.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_Symbol.Location = New System.Drawing.Point(174, 116)
+        Me.TXT_Symbol.Location = New System.Drawing.Point(181, 117)
         Me.TXT_Symbol.MaxLength = 15
         Me.TXT_Symbol.Name = "TXT_Symbol"
         Me.TXT_Symbol.Size = New System.Drawing.Size(230, 23)
@@ -273,7 +275,8 @@ Partial Class Admin_addStudent
         'TXT_username
         '
         Me.TXT_username.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_username.Location = New System.Drawing.Point(174, 247)
+        Me.TXT_username.Location = New System.Drawing.Point(181, 248)
+        Me.TXT_username.MaxLength = 16
         Me.TXT_username.Name = "TXT_username"
         Me.TXT_username.Size = New System.Drawing.Size(230, 23)
         Me.TXT_username.TabIndex = 39
@@ -281,23 +284,17 @@ Partial Class Admin_addStudent
         'TXT_Address
         '
         Me.TXT_Address.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_Address.Location = New System.Drawing.Point(174, 216)
+        Me.TXT_Address.Location = New System.Drawing.Point(181, 217)
+        Me.TXT_Address.MaxLength = 327
         Me.TXT_Address.Name = "TXT_Address"
         Me.TXT_Address.Size = New System.Drawing.Size(230, 23)
         Me.TXT_Address.TabIndex = 40
         '
-        'TXT_faculty
-        '
-        Me.TXT_faculty.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_faculty.Location = New System.Drawing.Point(517, 179)
-        Me.TXT_faculty.Name = "TXT_faculty"
-        Me.TXT_faculty.Size = New System.Drawing.Size(177, 23)
-        Me.TXT_faculty.TabIndex = 41
-        '
         'TXT_mobile
         '
         Me.TXT_mobile.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_mobile.Location = New System.Drawing.Point(517, 146)
+        Me.TXT_mobile.Location = New System.Drawing.Point(524, 117)
+        Me.TXT_mobile.MaxLength = 10
         Me.TXT_mobile.Name = "TXT_mobile"
         Me.TXT_mobile.Size = New System.Drawing.Size(177, 23)
         Me.TXT_mobile.TabIndex = 42
@@ -305,23 +302,17 @@ Partial Class Admin_addStudent
         'TXT_phone
         '
         Me.TXT_phone.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_phone.Location = New System.Drawing.Point(174, 353)
+        Me.TXT_phone.Location = New System.Drawing.Point(181, 354)
+        Me.TXT_phone.MaxLength = 10
         Me.TXT_phone.Name = "TXT_phone"
         Me.TXT_phone.Size = New System.Drawing.Size(230, 23)
         Me.TXT_phone.TabIndex = 43
         '
-        'TXT_DOB
-        '
-        Me.TXT_DOB.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_DOB.Location = New System.Drawing.Point(174, 321)
-        Me.TXT_DOB.Name = "TXT_DOB"
-        Me.TXT_DOB.Size = New System.Drawing.Size(230, 23)
-        Me.TXT_DOB.TabIndex = 44
-        '
         'TXT_password
         '
         Me.TXT_password.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_password.Location = New System.Drawing.Point(174, 285)
+        Me.TXT_password.Location = New System.Drawing.Point(181, 286)
+        Me.TXT_password.MaxLength = 15
         Me.TXT_password.Name = "TXT_password"
         Me.TXT_password.Size = New System.Drawing.Size(230, 23)
         Me.TXT_password.TabIndex = 46
@@ -329,7 +320,8 @@ Partial Class Admin_addStudent
         'TXT_Name
         '
         Me.TXT_Name.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_Name.Location = New System.Drawing.Point(174, 184)
+        Me.TXT_Name.Location = New System.Drawing.Point(181, 185)
+        Me.TXT_Name.MaxLength = 327
         Me.TXT_Name.Name = "TXT_Name"
         Me.TXT_Name.Size = New System.Drawing.Size(230, 23)
         Me.TXT_Name.TabIndex = 47
@@ -337,56 +329,25 @@ Partial Class Admin_addStudent
         'TXT_Registrstion
         '
         Me.TXT_Registrstion.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_Registrstion.Location = New System.Drawing.Point(174, 151)
+        Me.TXT_Registrstion.Location = New System.Drawing.Point(181, 152)
+        Me.TXT_Registrstion.MaxLength = 15
         Me.TXT_Registrstion.Name = "TXT_Registrstion"
         Me.TXT_Registrstion.Size = New System.Drawing.Size(230, 23)
         Me.TXT_Registrstion.TabIndex = 48
         '
-        'TXT_semester
-        '
-        Me.TXT_semester.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_semester.Location = New System.Drawing.Point(517, 280)
-        Me.TXT_semester.Name = "TXT_semester"
-        Me.TXT_semester.Size = New System.Drawing.Size(177, 23)
-        Me.TXT_semester.TabIndex = 49
-        '
         'TXT_fee
         '
         Me.TXT_fee.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_fee.Location = New System.Drawing.Point(517, 313)
+        Me.TXT_fee.Location = New System.Drawing.Point(524, 284)
         Me.TXT_fee.MaxLength = 8
         Me.TXT_fee.Name = "TXT_fee"
         Me.TXT_fee.Size = New System.Drawing.Size(177, 23)
         Me.TXT_fee.TabIndex = 50
         '
-        'TXT_discount
-        '
-        Me.TXT_discount.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_discount.Location = New System.Drawing.Point(517, 348)
-        Me.TXT_discount.Name = "TXT_discount"
-        Me.TXT_discount.Size = New System.Drawing.Size(177, 23)
-        Me.TXT_discount.TabIndex = 51
-        '
-        'TXT_program
-        '
-        Me.TXT_program.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_program.Location = New System.Drawing.Point(517, 246)
-        Me.TXT_program.Name = "TXT_program"
-        Me.TXT_program.Size = New System.Drawing.Size(177, 23)
-        Me.TXT_program.TabIndex = 53
-        '
-        'TXT_level
-        '
-        Me.TXT_level.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXT_level.Location = New System.Drawing.Point(517, 211)
-        Me.TXT_level.Name = "TXT_level"
-        Me.TXT_level.Size = New System.Drawing.Size(177, 23)
-        Me.TXT_level.TabIndex = 52
-        '
         'Button_Submit
         '
         Me.Button_Submit.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Submit.Location = New System.Drawing.Point(628, 394)
+        Me.Button_Submit.Location = New System.Drawing.Point(619, 367)
         Me.Button_Submit.Name = "Button_Submit"
         Me.Button_Submit.Size = New System.Drawing.Size(75, 32)
         Me.Button_Submit.TabIndex = 54
@@ -396,12 +357,217 @@ Partial Class Admin_addStudent
         'Button_reset
         '
         Me.Button_reset.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_reset.Location = New System.Drawing.Point(525, 395)
+        Me.Button_reset.Location = New System.Drawing.Point(516, 368)
         Me.Button_reset.Name = "Button_reset"
         Me.Button_reset.Size = New System.Drawing.Size(75, 31)
         Me.Button_reset.TabIndex = 55
         Me.Button_reset.Text = "Reset"
         Me.Button_reset.UseVisualStyleBackColor = True
+        '
+        'ComboBox_faculty
+        '
+        Me.ComboBox_faculty.FormattingEnabled = True
+        Me.ComboBox_faculty.Items.AddRange(New Object() {"Science & Technology"})
+        Me.ComboBox_faculty.Location = New System.Drawing.Point(524, 152)
+        Me.ComboBox_faculty.Name = "ComboBox_faculty"
+        Me.ComboBox_faculty.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox_faculty.TabIndex = 56
+        '
+        'ComboBox_semester
+        '
+        Me.ComboBox_semester.FormattingEnabled = True
+        Me.ComboBox_semester.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
+        Me.ComboBox_semester.Location = New System.Drawing.Point(524, 253)
+        Me.ComboBox_semester.Name = "ComboBox_semester"
+        Me.ComboBox_semester.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox_semester.TabIndex = 57
+        '
+        'ComboBox_program
+        '
+        Me.ComboBox_program.FormattingEnabled = True
+        Me.ComboBox_program.Items.AddRange(New Object() {"BCA", "BEIT"})
+        Me.ComboBox_program.Location = New System.Drawing.Point(524, 218)
+        Me.ComboBox_program.Name = "ComboBox_program"
+        Me.ComboBox_program.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox_program.TabIndex = 58
+        '
+        'ComboBox_level
+        '
+        Me.ComboBox_level.FormattingEnabled = True
+        Me.ComboBox_level.Items.AddRange(New Object() {"Bachelors"})
+        Me.ComboBox_level.Location = New System.Drawing.Point(524, 184)
+        Me.ComboBox_level.Name = "ComboBox_level"
+        Me.ComboBox_level.Size = New System.Drawing.Size(177, 21)
+        Me.ComboBox_level.TabIndex = 59
+        '
+        'Label_DOB_DETAIL
+        '
+        Me.Label_DOB_DETAIL.AutoSize = True
+        Me.Label_DOB_DETAIL.Font = New System.Drawing.Font("Comic Sans MS", 6.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_DOB_DETAIL.Location = New System.Drawing.Point(74, 338)
+        Me.Label_DOB_DETAIL.Name = "Label_DOB_DETAIL"
+        Me.Label_DOB_DETAIL.Size = New System.Drawing.Size(59, 11)
+        Me.Label_DOB_DETAIL.TabIndex = 60
+        Me.Label_DOB_DETAIL.Text = "YYYY/MM/DD"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label2.Location = New System.Drawing.Point(140, 119)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(14, 17)
+        Me.Label2.TabIndex = 61
+        Me.Label2.Text = "*"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label8.Location = New System.Drawing.Point(107, 191)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(14, 17)
+        Me.Label8.TabIndex = 62
+        Me.Label8.Text = "*"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label16.Location = New System.Drawing.Point(120, 222)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(14, 17)
+        Me.Label16.TabIndex = 63
+        Me.Label16.Text = "*"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label17.Location = New System.Drawing.Point(131, 257)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(14, 17)
+        Me.Label17.TabIndex = 64
+        Me.Label17.Text = "*"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label18.Location = New System.Drawing.Point(129, 291)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(14, 17)
+        Me.Label18.TabIndex = 65
+        Me.Label18.Text = "*"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label19.Location = New System.Drawing.Point(146, 321)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(14, 17)
+        Me.Label19.TabIndex = 66
+        Me.Label19.Text = "*"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label20.Location = New System.Drawing.Point(494, 157)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(14, 17)
+        Me.Label20.TabIndex = 67
+        Me.Label20.Text = "*"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label21.Location = New System.Drawing.Point(484, 188)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(14, 17)
+        Me.Label21.TabIndex = 68
+        Me.Label21.Text = "*"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label22.Location = New System.Drawing.Point(506, 223)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(14, 17)
+        Me.Label22.TabIndex = 69
+        Me.Label22.Text = "*"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label23.Location = New System.Drawing.Point(509, 257)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(14, 17)
+        Me.Label23.TabIndex = 70
+        Me.Label23.Text = "*"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label24.Location = New System.Drawing.Point(167, 157)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(14, 17)
+        Me.Label24.TabIndex = 71
+        Me.Label24.Text = "*"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label25.Location = New System.Drawing.Point(475, 291)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(14, 17)
+        Me.Label25.TabIndex = 72
+        Me.Label25.Text = "*"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label26.Location = New System.Drawing.Point(496, 123)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(14, 17)
+        Me.Label26.TabIndex = 73
+        Me.Label26.Text = "*"
+        '
+        'Dtp_DOB
+        '
+        Me.Dtp_DOB.Location = New System.Drawing.Point(181, 322)
+        Me.Dtp_DOB.Name = "Dtp_DOB"
+        Me.Dtp_DOB.Size = New System.Drawing.Size(230, 20)
+        Me.Dtp_DOB.TabIndex = 74
+        '
+        'Txt_discount
+        '
+        Me.Txt_discount.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txt_discount.Location = New System.Drawing.Point(524, 321)
+        Me.Txt_discount.MaxLength = 8
+        Me.Txt_discount.Name = "Txt_discount"
+        Me.Txt_discount.Size = New System.Drawing.Size(177, 23)
+        Me.Txt_discount.TabIndex = 75
         '
         'Admin_addStudent
         '
@@ -409,20 +575,34 @@ Partial Class Admin_addStudent
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(784, 451)
+        Me.Controls.Add(Me.Txt_discount)
+        Me.Controls.Add(Me.Dtp_DOB)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
+        Me.Controls.Add(Me.Label20)
+        Me.Controls.Add(Me.Label19)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label17)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label_DOB_DETAIL)
+        Me.Controls.Add(Me.ComboBox_level)
+        Me.Controls.Add(Me.ComboBox_program)
+        Me.Controls.Add(Me.ComboBox_semester)
+        Me.Controls.Add(Me.ComboBox_faculty)
         Me.Controls.Add(Me.Button_reset)
         Me.Controls.Add(Me.Button_Submit)
-        Me.Controls.Add(Me.TXT_program)
-        Me.Controls.Add(Me.TXT_level)
-        Me.Controls.Add(Me.TXT_discount)
         Me.Controls.Add(Me.TXT_fee)
-        Me.Controls.Add(Me.TXT_semester)
         Me.Controls.Add(Me.TXT_Registrstion)
         Me.Controls.Add(Me.TXT_Name)
         Me.Controls.Add(Me.TXT_password)
-        Me.Controls.Add(Me.TXT_DOB)
         Me.Controls.Add(Me.TXT_phone)
         Me.Controls.Add(Me.TXT_mobile)
-        Me.Controls.Add(Me.TXT_faculty)
         Me.Controls.Add(Me.TXT_Address)
         Me.Controls.Add(Me.TXT_username)
         Me.Controls.Add(Me.TXT_Symbol)
@@ -442,14 +622,12 @@ Partial Class Admin_addStudent
         Me.Controls.Add(Me.Label_rergistration)
         Me.Controls.Add(Me.LabelSymbol)
         Me.Controls.Add(Me.Panel_logout_admin)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label_SIS)
         Me.Name = "Admin_addStudent"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Admin_addStudent"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -458,7 +636,6 @@ Partial Class Admin_addStudent
     End Sub
 
     Friend WithEvents Panel_logout_admin As Panel
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label_SIS As Label
@@ -480,18 +657,32 @@ Partial Class Admin_addStudent
     Friend WithEvents TXT_Symbol As TextBox
     Friend WithEvents TXT_username As TextBox
     Friend WithEvents TXT_Address As TextBox
-    Friend WithEvents TXT_faculty As TextBox
     Friend WithEvents TXT_mobile As TextBox
     Friend WithEvents TXT_phone As TextBox
-    Friend WithEvents TXT_DOB As TextBox
     Friend WithEvents TXT_password As TextBox
     Friend WithEvents TXT_Name As TextBox
     Friend WithEvents TXT_Registrstion As TextBox
-    Friend WithEvents TXT_semester As TextBox
     Friend WithEvents TXT_fee As TextBox
-    Friend WithEvents TXT_discount As TextBox
-    Friend WithEvents TXT_program As TextBox
-    Friend WithEvents TXT_level As TextBox
     Friend WithEvents Button_Submit As Button
     Friend WithEvents Button_reset As Button
+    Friend WithEvents ComboBox_faculty As ComboBox
+    Friend WithEvents ComboBox_semester As ComboBox
+    Friend WithEvents ComboBox_program As ComboBox
+    Friend WithEvents ComboBox_level As ComboBox
+    Friend WithEvents Label_DOB_DETAIL As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Dtp_DOB As DateTimePicker
+    Friend WithEvents Txt_discount As TextBox
 End Class
