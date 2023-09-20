@@ -22,10 +22,8 @@ Public Class Admin_changePassword
                         updateCommand.Parameters.AddWithValue("@NewPassword", Txt_newPWD1.Text)
                         updateCommand.Parameters.AddWithValue("@AdminID", USERNAME_)
                         updateCommand.Parameters.AddWithValue("@OldPassword", Txt_oldPWD.Text)
-
                         Con.Open()
                         Dim rowsAffected As Integer = updateCommand.ExecuteNonQuery()
-
                         If rowsAffected > 0 Then
                             ' Password updated successfully
                             MsgBox("Password has been updated successfully!")

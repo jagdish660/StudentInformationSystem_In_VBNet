@@ -1,7 +1,7 @@
 ﻿Public Class SIS1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_Strtprgrm.Click
-        Dim hahaha As String = 1
-        Dim form2 As New Student_login(hahaha)
+        Dim STUDENTINFO As String = 1
+        Dim form2 As New Student_login(STUDENTINFO)
         If List1.SelectedItem IsNot Nothing AndAlso List1.SelectedItem.ToString() = "Admin" Then
             SwitchPanel(Admin_login)
         Else

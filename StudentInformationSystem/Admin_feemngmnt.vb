@@ -56,6 +56,7 @@ Public Class Admin_feemngmnt
         Txt_symbol.Visible = True
         Txt_symbol.Text = ""
         Button_search_symbol.Visible = True
+        Button_submit.Visible = False
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox_update.Click
@@ -178,7 +179,7 @@ Public Class Admin_feemngmnt
     Private Sub Button_update_search_Click(sender As Object, e As EventArgs) Handles Button_update_search.Click
         Try
             Con.Open()
-
+            PictureBox_backbuttons.Visible = True
             ' Use parameterized queries
             Dim symbol As String = Txt_symbol.Text
             Dim selectFeeQuery As String = "SELECT * FROM `fee` WHERE `S_no` = @Symbol"

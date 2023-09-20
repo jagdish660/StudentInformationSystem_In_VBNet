@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin_updateStudent
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Admin_updateStudent
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel_logout_admin = New System.Windows.Forms.Panel()
         Me.Label_SIS = New System.Windows.Forms.Label()
@@ -49,7 +49,7 @@ Partial Class Admin_updateStudent
         Me.Label_fee = New System.Windows.Forms.Label()
         Me.Label_discount = New System.Windows.Forms.Label()
         Me.Label_semester = New System.Windows.Forms.Label()
-        Me.Txt_phone = New System.Windows.Forms.TextBox()
+        Me.Txt_email = New System.Windows.Forms.TextBox()
         Me.Txt_mobile = New System.Windows.Forms.TextBox()
         Me.Label_phone = New System.Windows.Forms.Label()
         Me.Label_mobile = New System.Windows.Forms.Label()
@@ -332,13 +332,13 @@ Partial Class Admin_updateStudent
         Me.Label_semester.Text = "Semester :"
         Me.Label_semester.Visible = False
         '
-        'Txt_phone
+        'Txt_email
         '
-        Me.Txt_phone.Location = New System.Drawing.Point(177, 383)
-        Me.Txt_phone.Name = "Txt_phone"
-        Me.Txt_phone.Size = New System.Drawing.Size(180, 20)
-        Me.Txt_phone.TabIndex = 67
-        Me.Txt_phone.Visible = False
+        Me.Txt_email.Location = New System.Drawing.Point(177, 383)
+        Me.Txt_email.Name = "Txt_email"
+        Me.Txt_email.Size = New System.Drawing.Size(180, 20)
+        Me.Txt_email.TabIndex = 67
+        Me.Txt_email.Visible = False
         '
         'Txt_mobile
         '
@@ -354,9 +354,9 @@ Partial Class Admin_updateStudent
         Me.Label_phone.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_phone.Location = New System.Drawing.Point(65, 386)
         Me.Label_phone.Name = "Label_phone"
-        Me.Label_phone.Size = New System.Drawing.Size(76, 17)
+        Me.Label_phone.Size = New System.Drawing.Size(97, 17)
         Me.Label_phone.TabIndex = 65
-        Me.Label_phone.Text = "Phone No. :"
+        Me.Label_phone.Text = "Email address :"
         Me.Label_phone.Visible = False
         '
         'Label_mobile
@@ -373,7 +373,7 @@ Partial Class Admin_updateStudent
         'Cmb_Faculty
         '
         Me.Cmb_Faculty.FormattingEnabled = True
-        Me.Cmb_Faculty.Items.AddRange(New Object() {"Science & Technology"})
+        Me.Cmb_Faculty.Items.AddRange(New Object() {"Science & Technology", "Management"})
         Me.Cmb_Faculty.Location = New System.Drawing.Point(549, 197)
         Me.Cmb_Faculty.Name = "Cmb_Faculty"
         Me.Cmb_Faculty.Size = New System.Drawing.Size(165, 21)
@@ -393,7 +393,7 @@ Partial Class Admin_updateStudent
         'Cmb_program
         '
         Me.Cmb_program.FormattingEnabled = True
-        Me.Cmb_program.Items.AddRange(New Object() {"BCA", "BEIT"})
+        Me.Cmb_program.Items.AddRange(New Object() {"BBA", "BCA", "BEIT"})
         Me.Cmb_program.Location = New System.Drawing.Point(549, 257)
         Me.Cmb_program.Name = "Cmb_program"
         Me.Cmb_program.Size = New System.Drawing.Size(165, 21)
@@ -463,7 +463,7 @@ Partial Class Admin_updateStudent
         Me.Controls.Add(Me.Cmb_program)
         Me.Controls.Add(Me.Cmb_semester)
         Me.Controls.Add(Me.Cmb_Faculty)
-        Me.Controls.Add(Me.Txt_phone)
+        Me.Controls.Add(Me.Txt_email)
         Me.Controls.Add(Me.Txt_mobile)
         Me.Controls.Add(Me.Label_phone)
         Me.Controls.Add(Me.Label_mobile)
@@ -531,7 +531,7 @@ Partial Class Admin_updateStudent
     Friend WithEvents Label_fee As Label
     Friend WithEvents Label_discount As Label
     Friend WithEvents Label_semester As Label
-    Friend WithEvents Txt_phone As TextBox
+    Friend WithEvents Txt_email As TextBox
     Friend WithEvents Txt_mobile As TextBox
     Friend WithEvents Label_phone As Label
     Friend WithEvents Label_mobile As Label

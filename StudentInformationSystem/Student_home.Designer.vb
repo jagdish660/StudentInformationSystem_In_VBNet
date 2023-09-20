@@ -31,6 +31,8 @@ Partial Class Student_home1
         Me.PictureBox_myInfo = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label_usernamee = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox_course, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_myInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +61,7 @@ Partial Class Student_home1
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(59, 187)
+        Me.Label3.Location = New System.Drawing.Point(59, 196)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(91, 15)
         Me.Label3.TabIndex = 10
@@ -70,7 +72,7 @@ Partial Class Student_home1
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(78, 276)
+        Me.Label4.Location = New System.Drawing.Point(78, 285)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(50, 15)
         Me.Label4.TabIndex = 11
@@ -79,16 +81,17 @@ Partial Class Student_home1
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(64, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(58, 13)
+        Me.Label2.Size = New System.Drawing.Size(70, 17)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Welcome! "
         '
         'PictureBox_course
         '
         Me.PictureBox_course.Image = Global.StudentInformationSystem.My.Resources.Resources.courses
-        Me.PictureBox_course.Location = New System.Drawing.Point(54, 208)
+        Me.PictureBox_course.Location = New System.Drawing.Point(54, 217)
         Me.PictureBox_course.Name = "PictureBox_course"
         Me.PictureBox_course.Size = New System.Drawing.Size(101, 83)
         Me.PictureBox_course.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -98,7 +101,7 @@ Partial Class Student_home1
         'PictureBox_myInfo
         '
         Me.PictureBox_myInfo.Image = Global.StudentInformationSystem.My.Resources.Resources.images
-        Me.PictureBox_myInfo.Location = New System.Drawing.Point(54, 119)
+        Me.PictureBox_myInfo.Location = New System.Drawing.Point(54, 128)
         Me.PictureBox_myInfo.Name = "PictureBox_myInfo"
         Me.PictureBox_myInfo.Size = New System.Drawing.Size(101, 83)
         Me.PictureBox_myInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -125,12 +128,34 @@ Partial Class Student_home1
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
+        'Label_usernamee
+        '
+        Me.Label_usernamee.AutoSize = True
+        Me.Label_usernamee.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_usernamee.Location = New System.Drawing.Point(128, 93)
+        Me.Label_usernamee.Name = "Label_usernamee"
+        Me.Label_usernamee.Size = New System.Drawing.Size(51, 17)
+        Me.Label_usernamee.TabIndex = 13
+        Me.Label_usernamee.Text = "student"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(263, 93)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(186, 17)
+        Me.Label5.TabIndex = 14
+        Me.Label5.Text = "in Student Information System."
+        '
         'Student_home1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label_usernamee)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -161,4 +186,6 @@ Partial Class Student_home1
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label_usernamee As Label
+    Friend WithEvents Label5 As Label
 End Class

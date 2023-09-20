@@ -37,6 +37,9 @@ Partial Class Student_courses
         Me.Label_fee = New System.Windows.Forms.Label()
         Me.Dgv_available_courses = New System.Windows.Forms.DataGridView()
         Me.Dgv_fee = New System.Windows.Forms.DataGridView()
+        Me.Label_program = New System.Windows.Forms.Label()
+        Me.Cmb_program = New System.Windows.Forms.ComboBox()
+        Me.Button_search = New System.Windows.Forms.Button()
         CType(Me.PictureBox_enrolled, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_fee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_courses, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -202,12 +205,48 @@ Partial Class Student_courses
         Me.Dgv_fee.TabIndex = 28
         Me.Dgv_fee.Visible = False
         '
+        'Label_program
+        '
+        Me.Label_program.AutoSize = True
+        Me.Label_program.Font = New System.Drawing.Font("Microsoft YaHei UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_program.Location = New System.Drawing.Point(272, 133)
+        Me.Label_program.Name = "Label_program"
+        Me.Label_program.Size = New System.Drawing.Size(62, 16)
+        Me.Label_program.TabIndex = 29
+        Me.Label_program.Text = "Program :"
+        Me.Label_program.Visible = False
+        '
+        'Cmb_program
+        '
+        Me.Cmb_program.FormattingEnabled = True
+        Me.Cmb_program.Items.AddRange(New Object() {"BBA", "BCA", "BEIT"})
+        Me.Cmb_program.Location = New System.Drawing.Point(340, 131)
+        Me.Cmb_program.Name = "Cmb_program"
+        Me.Cmb_program.Size = New System.Drawing.Size(109, 21)
+        Me.Cmb_program.TabIndex = 31
+        Me.Cmb_program.Visible = False
+        '
+        'Button_search
+        '
+        Me.Button_search.BackColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Button_search.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_search.Location = New System.Drawing.Point(456, 127)
+        Me.Button_search.Name = "Button_search"
+        Me.Button_search.Size = New System.Drawing.Size(66, 28)
+        Me.Button_search.TabIndex = 32
+        Me.Button_search.Text = "Search"
+        Me.Button_search.UseVisualStyleBackColor = False
+        Me.Button_search.Visible = False
+        '
         'Student_courses
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button_search)
+        Me.Controls.Add(Me.Cmb_program)
+        Me.Controls.Add(Me.Label_program)
         Me.Controls.Add(Me.Dgv_fee)
         Me.Controls.Add(Me.Label_fee)
         Me.Controls.Add(Me.Dgv_available_courses)
@@ -254,4 +293,7 @@ Partial Class Student_courses
     Friend WithEvents Label_fee As Label
     Friend WithEvents Dgv_available_courses As DataGridView
     Friend WithEvents Dgv_fee As DataGridView
+    Friend WithEvents Label_program As Label
+    Friend WithEvents Cmb_program As ComboBox
+    Friend WithEvents Button_search As Button
 End Class

@@ -59,4 +59,9 @@ Public Class Student_change_password
     Private Sub Student_change_password_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Me.Hide()
+        Student_home1.Show()
+    End Sub
 End Class

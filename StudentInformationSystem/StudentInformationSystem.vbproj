@@ -198,6 +198,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABOUTUS.Designer.vb">
+      <DependentUpon>ABOUTUS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ABOUTUS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin_addStudent.Designer.vb">
       <DependentUpon>Admin_addStudent.vb</DependentUpon>
     </Compile>
@@ -220,6 +226,12 @@
       <DependentUpon>Admin_feemngmnt.vb</DependentUpon>
     </Compile>
     <Compile Include="Admin_feemngmnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_forgot_password.Designer.vb">
+      <DependentUpon>Admin_forgot_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_forgot_password.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_home.Designer.vb">
@@ -320,6 +332,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ABOUTUS.resx">
+      <DependentUpon>ABOUTUS.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_addStudent.resx">
       <DependentUpon>Admin_addStudent.vb</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_feemngmnt.resx">
       <DependentUpon>Admin_feemngmnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_forgot_password.resx">
+      <DependentUpon>Admin_forgot_password.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_home.resx">
       <DependentUpon>Admin_home.vb</DependentUpon>

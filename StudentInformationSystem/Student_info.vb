@@ -25,11 +25,11 @@ Public Class Student_info
                 Txt_name.Text = row("name").ToString()
                 Txt_registrstion.Text = row("registration").ToString()
                 Txt_symbol.Text = row("S_no").ToString()
-                'Txt_username.Text = row("Username").ToString()
+                Txt_username.Text = row("Username").ToString()
                 Txt_address.Text = row("address").ToString()
-                '   Txt_DOB.Text = row("Date of Birth").ToString() ' Use backticks or square brackets for column names with spaces
+                Dtp_DOB.Text = row("Date of Birth").ToString() ' Use backticks or square brackets for column names with spaces
                 Txt_mobile.Text = row("mobile").ToString()
-                Txt_phone.Text = row("phone").ToString()
+                Txt_phone.Text = row("email address").ToString()
                 Txt_faculty.Text = row("faculty").ToString()
                 Txt_level.Text = row("level").ToString()
                 Txt_program.Text = row("program").ToString()
@@ -39,7 +39,7 @@ Public Class Student_info
                 Txt_name.Text = ""
                 Txt_username.Text = ""
                 Txt_address.Text = ""
-                Txt_DOB.Text = ""
+                Dtp_DOB.Text = ""
                 Txt_mobile.Text = ""
                 Txt_phone.Text = ""
                 Txt_faculty.Text = ""

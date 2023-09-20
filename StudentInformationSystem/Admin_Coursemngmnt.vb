@@ -72,7 +72,7 @@ Public Class Admin_Coursemngmnt
         Label_faculty.Visible = False
         Button_submitADD.Visible = False
         PictureBox_back.Visible = True
-        Dgv_course.Visible = False
+        Dgv_course_delete.Visible = False
         Button_submitUpdate.Visible = False
         ButtonCOURSEREMOVE.Visible = False
         ButtonCOURSEupdate.Visible = False
@@ -93,9 +93,10 @@ Public Class Admin_Coursemngmnt
         Label_course_search.Visible = False
         Txt_courseSearch.Visible = False
         Button_courseSEARCH_dgv.Visible = False
+        Dgv_search_result.Visible = False
         ButtonCOURSEupdate.Visible = False
         ButtonCOURSEREMOVE.Visible = False
-        Dgv_course.Visible = False
+        Dgv_course_delete.Visible = False
         Label_code.Visible = True
         Txt_code.Visible = True
         Txt_code.ReadOnly = False
@@ -157,15 +158,39 @@ Public Class Admin_Coursemngmnt
         Button_reset.Visible = False
         Label_Delete_verification.Visible = False
         Button_submit_delete.Visible = False
+        Dgv_search_result.Visible = True
+        Try
+            ' Dim username As String = Txt_symbol_search.Text
+            Dim query As String = "SELECT * FROM `coursedata` WHERE 1"
+
+            'Using con As New MySqlConnection("YourConnectionString")
+            Con.Open()
+
+            Dim command As New MySqlCommand(query, Con)
+            command.Parameters.AddWithValue("", "")
+
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+            ' Bind the DataGridView to the DataTable
+            Dgv_search_result.DataSource = table
+            Dgv_search_result.Refresh()
+            'End Using
+        Catch ex As Exception
+            MsgBox("An error occurred: " & ex.Message)
+        Finally
+            Con.Close()
+        End Try
 
     End Sub
 
     Private Sub Button_courseSEARCH_dgv_Click(sender As Object, e As EventArgs) Handles Button_courseSEARCH_dgv.Click
+        Dgv_search_result.DataSource = Nothing
         Try
-            Button_reset.Visible = True
-            Dgv_course.Visible = True
+            Button_reset.Visible = False
+            Dgv_course_delete.Visible = False
             ' Dim username As String = Txt_symbol_search.Text
-            Dim query As String = "SELECT * FROM `coursedata` WHERE `coursecode` = @Code "
+            Dim query As String = "SELECT * FROM `coursedata` WHERE `coursecode` = @Code OR `Program` = @Code"
 
             'Using con As New MySqlConnection("YourConnectionString")
             Con.Open()
@@ -177,8 +202,8 @@ Public Class Admin_Coursemngmnt
             Dim table As New DataTable()
             adapter.Fill(table)
             ' Bind the DataGridView to the DataTable
-            Dgv_course.DataSource = table
-            Dgv_course.Refresh()
+            Dgv_search_result.DataSource = table
+            Dgv_search_result.Refresh()
             'End Using
         Catch ex As Exception
             MsgBox("An error occurred: " & ex.Message)
@@ -196,7 +221,8 @@ Public Class Admin_Coursemngmnt
         ButtonCOURSEREMOVE.Visible = True
         Label_course_search.Visible = True
         Txt_courseSearch.Visible = True
-        Dgv_course.Visible = False
+        Dgv_course_delete.Visible = False
+        Dgv_search_result.Visible = False
         Label_code.Visible = False
         Txt_code.Visible = False
         Label_name.Visible = False
@@ -225,10 +251,11 @@ Public Class Admin_Coursemngmnt
         PictureBox_Course_back.Visible = True
         ButtonCOURSEupdate.Visible = True
         Button_courseSEARCH_dgv.Visible = False
+        Dgv_search_result.Visible = False
         ButtonCOURSEREMOVE.Visible = False
         Label_course_search.Visible = True
         Txt_courseSearch.Visible = True
-        Dgv_course.Visible = False
+        Dgv_course_delete.Visible = False
         Label_code.Visible = False
         Txt_code.Visible = False
         Label_name.Visible = False
@@ -256,7 +283,7 @@ Public Class Admin_Coursemngmnt
         Try
             Con.Open()
             Dim symbol As String = Txt_courseSearch.Text
-            Dim query As String = "SELECT * FROM coursedata WHERE CourseCode = @Symbol"
+            Dim query As String = "SELECT * FROM coursedata WHERE CourseCode = @Symbol "
 
             Dim adapter As New MySqlDataAdapter(New MySqlCommand(query, Con))
             adapter.SelectCommand.Parameters.AddWithValue("@Symbol", symbol)
@@ -310,13 +337,12 @@ Public Class Admin_Coursemngmnt
     End Sub
 
     Private Sub Button_reset_Click(sender As Object, e As EventArgs) Handles Button_reset.Click
-        Dgv_course.DataSource = Nothing
+        Dgv_course_delete.DataSource = Nothing
         Button_submit_delete.Visible = False
         Button_reset.Visible = False
         Label_Delete_verification.Visible = False
         Button_delete_NO.Visible = False
         Button_delete_YES.Visible = False
-        Txt_code.Text = ""
         Txt_courseSearch.Text = ""
         Txt_name.Text = ""
         Txt_program.Text = ""
@@ -382,7 +408,7 @@ Public Class Admin_Coursemngmnt
         Try
             Button_submit_delete.Visible = True
             Button_reset.Visible = True
-            Dgv_course.Visible = True
+            Dgv_course_delete.Visible = True
             ' Dim username As String = Txt_symbol_search.Text
             Dim query As String = "SELECT * FROM `coursedata` WHERE `coursecode` = @Code "
 
@@ -396,8 +422,8 @@ Public Class Admin_Coursemngmnt
             Dim table As New DataTable()
             adapter.Fill(table)
             ' Bind the DataGridView to the DataTable
-            Dgv_course.DataSource = table
-            Dgv_course.Refresh()
+            Dgv_course_delete.DataSource = table
+            Dgv_course_delete.Refresh()
             'End Using
         Catch ex As Exception
             MsgBox("An error occurred: " & ex.Message)
@@ -410,7 +436,7 @@ Public Class Admin_Coursemngmnt
         PictureBox_back.Visible = False
         PictureBox_Course_back.Visible = True
         Label_course_search.Visible = True
-        Dgv_course.Visible = False
+        Dgv_course_delete.Visible = False
         Button_delete_YES.Visible = False
         Button_delete_NO.Visible = False
         Txt_courseSearch.Visible = True
@@ -437,7 +463,7 @@ Public Class Admin_Coursemngmnt
         Dim i As Integer
         Try
             Con.Open()
-            sql = "UPDATE `COURSEDATA` SET `Course`=@Name, `Faculty`= @Faculty, `Program`= @Program, `Level` = @Level, `Semester`=@Semester, `CreditHours`=@Credit, WHERE `CourseCode` = @CCREDIT"
+            sql = "UPDATE `COURSEDATA` SET `Course`=@Name, `Faculty`= @Faculty, `Program`= @Program, `Level` = @Level, `Semester`=@Semester, `CreditHours`=@Credit WHERE `CourseCode` = @CCREDIT"
 
             Dim mysc As New MySqlCommand(sql, Con)
             mysc.Parameters.AddWithValue("@Name", Txt_name.Text)
@@ -482,14 +508,14 @@ Public Class Admin_Coursemngmnt
             i = mysc.ExecuteNonQuery()
             Dim sql1 As String = "SELECT * FROM `coursedata` WHERE `coursecode` = @Symbol"
             Dim reader As MySqlDataReader
-            Dim mysc3 As New MySqlCommand(sql1, Con)
-            reader = mysc3.ExecuteReader()
+            Dim mysc1 As New MySqlCommand(sql1, Con)
+            reader = mysc1.ExecuteReader()
 
             If reader.Read() Then
                 MsgBox("Something went wrong. Please try again.")
             Else
                 MsgBox("Course details deleted successfully.")
-                Dgv_course.Visible = False
+                Dgv_course_delete.Visible = False
                 Button_reset.Visible = False
                 Button_submit_delete.Visible = False
                 Label_Delete_verification.Visible = False
@@ -502,7 +528,7 @@ Public Class Admin_Coursemngmnt
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            Dgv_course.DataSource = Nothing
+            Dgv_course_delete.DataSource = Nothing
             Con.Close()
         End Try
     End Sub

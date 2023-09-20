@@ -67,7 +67,6 @@ Public Class Admin_removeStudent
             End If
 
             reader.Close()
-            Con.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally

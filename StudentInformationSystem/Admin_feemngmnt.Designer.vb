@@ -377,7 +377,7 @@ Partial Class Admin_feemngmnt
         'Button_search_symbol
         '
         Me.Button_search_symbol.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_search_symbol.Location = New System.Drawing.Point(478, 110)
+        Me.Button_search_symbol.Location = New System.Drawing.Point(478, 112)
         Me.Button_search_symbol.Name = "Button_search_symbol"
         Me.Button_search_symbol.Size = New System.Drawing.Size(60, 23)
         Me.Button_search_symbol.TabIndex = 53

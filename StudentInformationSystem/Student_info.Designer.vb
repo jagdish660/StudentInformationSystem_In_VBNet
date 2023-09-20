@@ -39,7 +39,6 @@ Partial Class Student_info
         Me.Txt_name = New System.Windows.Forms.TextBox()
         Me.Txt_mobile = New System.Windows.Forms.TextBox()
         Me.Txt_address = New System.Windows.Forms.TextBox()
-        Me.Txt_DOB = New System.Windows.Forms.TextBox()
         Me.Txt_level = New System.Windows.Forms.TextBox()
         Me.Txt_phone = New System.Windows.Forms.TextBox()
         Me.Txt_semester = New System.Windows.Forms.TextBox()
@@ -50,6 +49,7 @@ Partial Class Student_info
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Txt_username = New System.Windows.Forms.TextBox()
         Me.Label_username = New System.Windows.Forms.Label()
+        Me.Dtp_DOB = New System.Windows.Forms.DateTimePicker()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -140,9 +140,9 @@ Partial Class Student_info
         Me.Label_phone.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_phone.Location = New System.Drawing.Point(421, 209)
         Me.Label_phone.Name = "Label_phone"
-        Me.Label_phone.Size = New System.Drawing.Size(76, 17)
+        Me.Label_phone.Size = New System.Drawing.Size(97, 17)
         Me.Label_phone.TabIndex = 21
-        Me.Label_phone.Text = "Phone No. :"
+        Me.Label_phone.Text = "Email address :"
         '
         'Label_level
         '
@@ -223,16 +223,6 @@ Partial Class Student_info
         Me.Txt_address.Size = New System.Drawing.Size(192, 23)
         Me.Txt_address.TabIndex = 29
         Me.Txt_address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Txt_DOB
-        '
-        Me.Txt_DOB.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txt_DOB.Location = New System.Drawing.Point(193, 210)
-        Me.Txt_DOB.Name = "Txt_DOB"
-        Me.Txt_DOB.ReadOnly = True
-        Me.Txt_DOB.Size = New System.Drawing.Size(192, 23)
-        Me.Txt_DOB.TabIndex = 30
-        Me.Txt_DOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Txt_level
         '
@@ -331,12 +321,20 @@ Partial Class Student_info
         Me.Label_username.TabIndex = 40
         Me.Label_username.Text = "Username :"
         '
+        'Dtp_DOB
+        '
+        Me.Dtp_DOB.Location = New System.Drawing.Point(193, 212)
+        Me.Dtp_DOB.Name = "Dtp_DOB"
+        Me.Dtp_DOB.Size = New System.Drawing.Size(192, 20)
+        Me.Dtp_DOB.TabIndex = 42
+        '
         'Student_info
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Dtp_DOB)
         Me.Controls.Add(Me.Txt_username)
         Me.Controls.Add(Me.Label_username)
         Me.Controls.Add(Me.PictureBox3)
@@ -345,7 +343,6 @@ Partial Class Student_info
         Me.Controls.Add(Me.Txt_semester)
         Me.Controls.Add(Me.Txt_phone)
         Me.Controls.Add(Me.Txt_level)
-        Me.Controls.Add(Me.Txt_DOB)
         Me.Controls.Add(Me.Txt_address)
         Me.Controls.Add(Me.Txt_mobile)
         Me.Controls.Add(Me.Txt_name)
@@ -393,7 +390,6 @@ Partial Class Student_info
     Friend WithEvents Txt_name As TextBox
     Friend WithEvents Txt_mobile As TextBox
     Friend WithEvents Txt_address As TextBox
-    Friend WithEvents Txt_DOB As TextBox
     Friend WithEvents Txt_level As TextBox
     Friend WithEvents Txt_phone As TextBox
     Friend WithEvents Txt_semester As TextBox
@@ -403,4 +399,5 @@ Partial Class Student_info
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Txt_username As TextBox
     Friend WithEvents Label_username As Label
+    Friend WithEvents Dtp_DOB As DateTimePicker
 End Class

@@ -34,11 +34,15 @@ Public Class Admin_login
             End If
         Catch ex As Exception
             Dim unused4 = MsgBox(ex.Message)
+        Finally
+            Con.Close()
         End Try
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        MsgBox("WIll be added later.")
+        Me.Hide()
+        SIS1.Hide()
+        Admin_forgot_password.Show()
     End Sub
 
     Private Sub Admin_login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

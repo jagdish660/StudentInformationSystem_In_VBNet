@@ -13,7 +13,9 @@ Public Class Student_courses
             Dgv_fee.Visible = False
             Label_course.Visible = True
             DGV_enrolled_Courses.Visible = True
-
+            Label_program.Visible = False
+            Cmb_program.Visible = False
+            Button_search.Visible = False
             ' Retrieve the program of the currently logged-in student
             Dim enrolled_course As String
             Con.Open()
@@ -49,13 +51,17 @@ Public Class Student_courses
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox_courses.Click
-
+        Dgv_available_courses.DataSource = Nothing
         Try
+            Label_program.Visible = True
+            Cmb_program.Visible = True
+            Button_search.Visible = True
             Dgv_fee.Visible = False
             Label_course.Visible = True
             Dgv_available_courses.Visible = True
             Label_fee.Visible = False
             DGV_enrolled_Courses.Visible = False
+            Cmb_program.Text = ""
             ' Dim username As String = Txt_symbol_search.Text
             Dim query As String = "SELECT * FROM `coursedata` WHERE 1"
 
@@ -99,6 +105,9 @@ Public Class Student_courses
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox_fee.Click
         Try
+            Label_program.Visible = False
+            Cmb_program.Visible = False
+            Button_search.Visible = False
             Label_fee.Visible = True
             DGV_enrolled_Courses.Visible = False
             Label_course.Visible = False
@@ -148,5 +157,39 @@ Public Class Student_courses
 
     Private Sub Dgv_fee_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv_fee.CellContentClick
 
+    End Sub
+
+    Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
+        Dgv_available_courses.DataSource = Nothing
+        Label_program.Visible = True
+        Cmb_program.Visible = True
+        Button_search.Visible = True
+        Try
+            Dgv_fee.Visible = False
+            Label_course.Visible = True
+            Dgv_available_courses.Visible = True
+            Label_fee.Visible = False
+            DGV_enrolled_Courses.Visible = False
+            ' Dim username As String = Txt_symbol_search.Text
+            Dim query As String = "SELECT * FROM `coursedata` WHERE `program`='" & Cmb_program.Text & "'"
+
+            'Using con As New MySqlConnection("YourConnectionString")
+            Con.Open()
+
+            Dim command As New MySqlCommand(query, Con)
+            command.Parameters.AddWithValue("@Username", User__name)
+
+            Dim adapter As New MySqlDataAdapter(command)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+            ' Bind the DataGridView to the DataTable
+            Dgv_available_courses.DataSource = table
+            Dgv_available_courses.Refresh()
+            'End Using
+        Catch ex As Exception
+            MsgBox("An error occurred: " & ex.Message)
+        Finally
+            Con.Close()
+        End Try
     End Sub
 End Class

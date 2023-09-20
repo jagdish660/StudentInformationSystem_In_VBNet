@@ -48,6 +48,8 @@ Public Class Student_login
             End If
         Catch ex As Exception
             Dim unused1 = MsgBox(ex.Message)
+        Finally
+            Con.Close()
         End Try
     End Sub
 

@@ -53,7 +53,7 @@ Partial Class Admin_Coursemngmnt
         Me.Cmb_faculty = New System.Windows.Forms.ComboBox()
         Me.Cmb_credit = New System.Windows.Forms.ComboBox()
         Me.PictureBox_Course_back = New System.Windows.Forms.PictureBox()
-        Me.Dgv_course = New System.Windows.Forms.DataGridView()
+        Me.Dgv_course_delete = New System.Windows.Forms.DataGridView()
         Me.Button_courseSEARCH_dgv = New System.Windows.Forms.Button()
         Me.ButtonCOURSEREMOVE = New System.Windows.Forms.Button()
         Me.ButtonCOURSEupdate = New System.Windows.Forms.Button()
@@ -66,6 +66,7 @@ Partial Class Admin_Coursemngmnt
         Me.Label_faculty = New System.Windows.Forms.Label()
         Me.Label_level = New System.Windows.Forms.Label()
         Me.Cmb_level = New System.Windows.Forms.ComboBox()
+        Me.Dgv_search_result = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox_search, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_update, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_remove, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +74,8 @@ Partial Class Admin_Coursemngmnt
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_back, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_Course_back, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Dgv_course, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_course_delete, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label_SIS
@@ -395,14 +397,14 @@ Partial Class Admin_Coursemngmnt
         Me.PictureBox_Course_back.TabStop = False
         Me.PictureBox_Course_back.Visible = False
         '
-        'Dgv_course
+        'Dgv_course_delete
         '
-        Me.Dgv_course.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgv_course.Location = New System.Drawing.Point(270, 163)
-        Me.Dgv_course.Name = "Dgv_course"
-        Me.Dgv_course.Size = New System.Drawing.Size(511, 146)
-        Me.Dgv_course.TabIndex = 54
-        Me.Dgv_course.Visible = False
+        Me.Dgv_course_delete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_course_delete.Location = New System.Drawing.Point(270, 150)
+        Me.Dgv_course_delete.Name = "Dgv_course_delete"
+        Me.Dgv_course_delete.Size = New System.Drawing.Size(515, 169)
+        Me.Dgv_course_delete.TabIndex = 54
+        Me.Dgv_course_delete.Visible = False
         '
         'Button_courseSEARCH_dgv
         '
@@ -420,7 +422,7 @@ Partial Class Admin_Coursemngmnt
         '
         Me.ButtonCOURSEREMOVE.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonCOURSEREMOVE.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonCOURSEREMOVE.Location = New System.Drawing.Point(487, 120)
+        Me.ButtonCOURSEREMOVE.Location = New System.Drawing.Point(487, 118)
         Me.ButtonCOURSEREMOVE.Name = "ButtonCOURSEREMOVE"
         Me.ButtonCOURSEREMOVE.Size = New System.Drawing.Size(56, 25)
         Me.ButtonCOURSEREMOVE.TabIndex = 56
@@ -432,7 +434,7 @@ Partial Class Admin_Coursemngmnt
         '
         Me.ButtonCOURSEupdate.BackColor = System.Drawing.SystemColors.AppWorkspace
         Me.ButtonCOURSEupdate.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonCOURSEupdate.Location = New System.Drawing.Point(487, 121)
+        Me.ButtonCOURSEupdate.Location = New System.Drawing.Point(487, 116)
         Me.ButtonCOURSEupdate.Name = "ButtonCOURSEupdate"
         Me.ButtonCOURSEupdate.Size = New System.Drawing.Size(56, 25)
         Me.ButtonCOURSEupdate.TabIndex = 57
@@ -543,12 +545,22 @@ Partial Class Admin_Coursemngmnt
         Me.Cmb_level.TabIndex = 68
         Me.Cmb_level.Visible = False
         '
+        'Dgv_search_result
+        '
+        Me.Dgv_search_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.Dgv_search_result.Location = New System.Drawing.Point(270, 150)
+        Me.Dgv_search_result.Name = "Dgv_search_result"
+        Me.Dgv_search_result.Size = New System.Drawing.Size(515, 263)
+        Me.Dgv_search_result.TabIndex = 69
+        Me.Dgv_search_result.Visible = False
+        '
         'Admin_Coursemngmnt
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Dgv_search_result)
         Me.Controls.Add(Me.Cmb_level)
         Me.Controls.Add(Me.Label_level)
         Me.Controls.Add(Me.Label_faculty)
@@ -561,7 +573,7 @@ Partial Class Admin_Coursemngmnt
         Me.Controls.Add(Me.ButtonCOURSEupdate)
         Me.Controls.Add(Me.ButtonCOURSEREMOVE)
         Me.Controls.Add(Me.Button_courseSEARCH_dgv)
-        Me.Controls.Add(Me.Dgv_course)
+        Me.Controls.Add(Me.Dgv_course_delete)
         Me.Controls.Add(Me.PictureBox_Course_back)
         Me.Controls.Add(Me.Cmb_credit)
         Me.Controls.Add(Me.Cmb_faculty)
@@ -603,7 +615,8 @@ Partial Class Admin_Coursemngmnt
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_back, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_Course_back, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Dgv_course, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_course_delete, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv_search_result, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -640,7 +653,7 @@ Partial Class Admin_Coursemngmnt
     Friend WithEvents Cmb_faculty As ComboBox
     Friend WithEvents Cmb_credit As ComboBox
     Friend WithEvents PictureBox_Course_back As PictureBox
-    Friend WithEvents Dgv_course As DataGridView
+    Friend WithEvents Dgv_course_delete As DataGridView
     Friend WithEvents Button_courseSEARCH_dgv As Button
     Friend WithEvents ButtonCOURSEREMOVE As Button
     Friend WithEvents ButtonCOURSEupdate As Button
@@ -653,4 +666,5 @@ Partial Class Admin_Coursemngmnt
     Friend WithEvents Label_faculty As Label
     Friend WithEvents Label_level As Label
     Friend WithEvents Cmb_level As ComboBox
+    Friend WithEvents Dgv_search_result As DataGridView
 End Class

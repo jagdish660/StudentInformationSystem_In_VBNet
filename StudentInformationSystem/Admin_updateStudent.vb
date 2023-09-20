@@ -63,7 +63,7 @@ Public Class Admin_updateStudent
                 Label_mobile.Visible = True
                 Txt_mobile.Visible = True
                 Label_phone.Visible = True
-                Txt_phone.Visible = True
+                Txt_email.Visible = True
                 Label_registration.Visible = True
                 Txt_registration.Visible = True
                 Label_username.Visible = True
@@ -73,6 +73,7 @@ Public Class Admin_updateStudent
                 Txt_pwdd.Visible = True
                 Label_lev.Visible = True
                 Cmb_level.Visible = True
+
                 Label_program.Visible = True
                 Cmb_program.Visible = True
                 Label_semester.Visible = True
@@ -88,7 +89,7 @@ Public Class Admin_updateStudent
                 Txt_address.Text = row("address").ToString()
                 Dtp_DOB.Text = row("Date of Birth").ToString()
                 Txt_mobile.Text = row("mobile").ToString()
-                Txt_phone.Text = row("phone").ToString()
+                Txt_email.Text = row("email address").ToString()
                 Cmb_Faculty.Text = row("faculty").ToString()
                 Cmb_level.Text = row("level").ToString()
                 Cmb_program.Text = row("program").ToString()
@@ -104,7 +105,7 @@ Public Class Admin_updateStudent
                 Dtp_DOB.Text = ""
                 Txt_pwdd.Text = ""
                 Txt_mobile.Text = ""
-                Txt_phone.Text = ""
+                Txt_email.Text = ""
                 Cmb_Faculty.Text = ""
                 Cmb_level.Text = ""
                 Cmb_program.Text = ""
@@ -126,22 +127,20 @@ Public Class Admin_updateStudent
 
     Private Sub Button_submit_Click(sender As Object, e As EventArgs) Handles Button_submit.Click
         Dim sql, sql1 As String
-        Dim i, j As Integer
-
         Try
             Con.Open()
-            sql = "UPDATE `student` SET `Password` = @Password `Name`=@Name, `Address`=@Address, `Date of Birth`=@DOB, `phone`=@Phone, `Mobile`=@Mobile, `Faculty`=@Faculty, `Level`=@Level, `Program`=@Program, `Semester`=@Semester, `Fee`=@Fee, `Discount`=@Discount WHERE `s_no` = @Symbol"
-            sql1 = "UPDATE `fee` SET `Total_fee` = @Fee1, `Discount` = @Discount1, `Totalfeetobepay` = (@Fee1 - @Discount1),  `Fee_due` = (@Fee1 - @Discount1 - Totalpaid) WHERE `s_no` = @Symbol1"
+            Sql = "UPDATE `student` SET `Password` = @Password, `Name` = @Name, `Address` = @Address, `Date of Birth` = @DOB, `email address` = @email_address, `Mobile` = @Mobile, `Faculty` = @Faculty, `Level` = @Level, `Program` = @Program, `Semester` = @Semester, `Fee` = @Fee, `Discount` = @Discount WHERE `s_no` = @Symbol"
+            sql1 = "UPDATE `fee` SET `Total_fee` = @Fee1, `Discount` = @Discount1, `Totalfeetobepay` = (@Fee1 - @Discount1), `Fee_due` = (@Fee1 - @Discount1 - @Totalpaid) WHERE `s_no` = @Symbol1"
 
-            Dim mysc As New MySqlCommand(sql, Con)
+            Dim mysc As New MySqlCommand(Sql, Con)
             Dim mysc1 As New MySqlCommand(sql1, Con)
 
             ' Add parameters to the queries
             mysc.Parameters.AddWithValue("@Symbol", Txt_symbol_search.Text)
-            mysc.Parameters.AddWithValue("@PAssword", Txt_pwdd.Text)
+            mysc.Parameters.AddWithValue("@Password", Txt_pwdd.Text)
             mysc.Parameters.AddWithValue("@Name", Txt_name.Text)
             mysc.Parameters.AddWithValue("@Address", Txt_address.Text)
-            mysc.Parameters.AddWithValue("@Phone", Txt_phone.Text)
+            mysc.Parameters.AddWithValue("@email_address", Txt_email.Text)
             mysc.Parameters.AddWithValue("@Mobile", Txt_mobile.Text)
             mysc.Parameters.AddWithValue("@Faculty", Cmb_Faculty.Text)
             mysc.Parameters.AddWithValue("@Level", Cmb_level.Text)
@@ -149,10 +148,12 @@ Public Class Admin_updateStudent
             mysc.Parameters.AddWithValue("@Semester", Cmb_semester.Text)
             mysc.Parameters.AddWithValue("@Fee", Txt_fee.Text)
             mysc.Parameters.AddWithValue("@Discount", Txt_discount.Text)
+
             mysc1.Parameters.AddWithValue("@Fee1", Txt_fee.Text)
             mysc1.Parameters.AddWithValue("@Discount1", Txt_discount.Text)
             mysc1.Parameters.AddWithValue("@Symbol1", Txt_symbol_search.Text)
             mysc1.Parameters.AddWithValue("@Totalpaid", "")
+
             ' Convert Txt_DOB.Text to DateTime
             Dim dob As DateTime
             If DateTime.TryParse(Dtp_DOB.Text, dob) Then
@@ -164,36 +165,20 @@ Public Class Admin_updateStudent
                 Return
             End If
 
-            j = mysc1.ExecuteNonQuery()
-            i = mysc.ExecuteNonQuery()
+            Dim j As Integer = mysc1.ExecuteNonQuery()
+            Dim i As Integer = mysc.ExecuteNonQuery()
 
             If i > 0 And j > 0 Then
                 MsgBox("Student details updated successfully!")
                 ' Clear the form fields or perform other necessary actions
-                Txt_symbol.Text = ""
-                Txt_name.Text = ""
-                Txt_address.Text = ""
-                Txt_discount.Text = ""
-                Dtp_DOB.Text = ""
-                Txt_fee.Text = ""
-                Txt_pwdd.Text = ""
-                Txt_mobile.Text = ""
-                Txt_phone.Text = ""
-                Txt_registration.Text = ""
-                Txt_symbol_search.Text = ""
-                Txt_username.Text = ""
-                Cmb_Faculty.Text = ""
-                Cmb_level.Text = ""
-                Cmb_program.Text = ""
-                Cmb_semester.Text = ""
-                Txt_username.Text = ""
+                ' ...
             ElseIf i = 0 And j = 0 Then
                 MsgBox("No matching student found with the specified symbol.")
             Else
                 MsgBox("Something went wrong.")
             End If
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("An error occurred: " & ex.Message)
         Finally
             Con.Close()
         End Try

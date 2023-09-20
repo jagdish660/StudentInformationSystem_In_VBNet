@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin_addStudent
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Admin_addStudent
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel_logout_admin = New System.Windows.Forms.Panel()
         Me.Label_SIS = New System.Windows.Forms.Label()
@@ -78,7 +78,7 @@ Partial Class Admin_addStudent
         '
         'Panel_logout_admin
         '
-        Me.Panel_logout_admin.Location = New System.Drawing.Point(595, 84)
+        Me.Panel_logout_admin.Location = New System.Drawing.Point(589, 88)
         Me.Panel_logout_admin.Name = "Panel_logout_admin"
         Me.Panel_logout_admin.Size = New System.Drawing.Size(190, 90)
         Me.Panel_logout_admin.TabIndex = 21
@@ -96,9 +96,9 @@ Partial Class Admin_addStudent
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.StudentInformationSystem.My.Resources.Resources.images__1_
-        Me.PictureBox3.Location = New System.Drawing.Point(664, 48)
+        Me.PictureBox3.Location = New System.Drawing.Point(659, 52)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox3.Size = New System.Drawing.Size(30, 27)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 19
         Me.PictureBox3.TabStop = False
@@ -169,9 +169,9 @@ Partial Class Admin_addStudent
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(63, 356)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 17)
+        Me.Label6.Size = New System.Drawing.Size(97, 17)
         Me.Label6.TabIndex = 27
-        Me.Label6.Text = "Phone :"
+        Me.Label6.Text = "Email address :"
         '
         'Label7
         '
@@ -303,7 +303,7 @@ Partial Class Admin_addStudent
         '
         Me.TXT_phone.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_phone.Location = New System.Drawing.Point(181, 354)
-        Me.TXT_phone.MaxLength = 10
+        Me.TXT_phone.MaxLength = 30
         Me.TXT_phone.Name = "TXT_phone"
         Me.TXT_phone.Size = New System.Drawing.Size(230, 23)
         Me.TXT_phone.TabIndex = 43
@@ -321,7 +321,7 @@ Partial Class Admin_addStudent
         '
         Me.TXT_Name.Font = New System.Drawing.Font("Microsoft Tai Le", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TXT_Name.Location = New System.Drawing.Point(181, 185)
-        Me.TXT_Name.MaxLength = 327
+        Me.TXT_Name.MaxLength = 60
         Me.TXT_Name.Name = "TXT_Name"
         Me.TXT_Name.Size = New System.Drawing.Size(230, 23)
         Me.TXT_Name.TabIndex = 47
@@ -367,8 +367,9 @@ Partial Class Admin_addStudent
         'ComboBox_faculty
         '
         Me.ComboBox_faculty.FormattingEnabled = True
-        Me.ComboBox_faculty.Items.AddRange(New Object() {"Science & Technology"})
+        Me.ComboBox_faculty.Items.AddRange(New Object() {"Science & Technology", "Management"})
         Me.ComboBox_faculty.Location = New System.Drawing.Point(524, 152)
+        Me.ComboBox_faculty.MaxLength = 22
         Me.ComboBox_faculty.Name = "ComboBox_faculty"
         Me.ComboBox_faculty.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox_faculty.TabIndex = 56
@@ -378,6 +379,7 @@ Partial Class Admin_addStudent
         Me.ComboBox_semester.FormattingEnabled = True
         Me.ComboBox_semester.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8"})
         Me.ComboBox_semester.Location = New System.Drawing.Point(524, 253)
+        Me.ComboBox_semester.MaxLength = 2
         Me.ComboBox_semester.Name = "ComboBox_semester"
         Me.ComboBox_semester.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox_semester.TabIndex = 57
@@ -385,8 +387,9 @@ Partial Class Admin_addStudent
         'ComboBox_program
         '
         Me.ComboBox_program.FormattingEnabled = True
-        Me.ComboBox_program.Items.AddRange(New Object() {"BCA", "BEIT"})
+        Me.ComboBox_program.Items.AddRange(New Object() {"BBA", "BCA", "BEIT"})
         Me.ComboBox_program.Location = New System.Drawing.Point(524, 218)
+        Me.ComboBox_program.MaxLength = 6
         Me.ComboBox_program.Name = "ComboBox_program"
         Me.ComboBox_program.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox_program.TabIndex = 58
@@ -396,6 +399,7 @@ Partial Class Admin_addStudent
         Me.ComboBox_level.FormattingEnabled = True
         Me.ComboBox_level.Items.AddRange(New Object() {"Bachelors"})
         Me.ComboBox_level.Location = New System.Drawing.Point(524, 184)
+        Me.ComboBox_level.MaxLength = 10
         Me.ComboBox_level.Name = "ComboBox_level"
         Me.ComboBox_level.Size = New System.Drawing.Size(177, 21)
         Me.ComboBox_level.TabIndex = 59
@@ -574,7 +578,7 @@ Partial Class Admin_addStudent
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(784, 451)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Txt_discount)
         Me.Controls.Add(Me.Dtp_DOB)
         Me.Controls.Add(Me.Label26)

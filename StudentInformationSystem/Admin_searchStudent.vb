@@ -28,7 +28,7 @@ Public Class Admin_searchStudent
         Try
             Dgv_search_result.Visible = True
             ' Dim username As String = Txt_symbol_search.Text
-            Dim query As String = "SELECT `s_no`,`registration`,`name`,`address`,`date of birth`,`phone`,`mobile`,`faculty`,`level`,`program`,`semester` FROM `student` WHERE `s_no` = @Username OR `username` = @Username"
+            Dim query As String = "SELECT `s_no`,`registration`,`name`,`address`,`date of birth`,`Email address`,`mobile`,`faculty`,`level`,`program`,`semester` FROM `student` WHERE `s_no` = @Username OR `username` = @Username"
 
             'Using con As New MySqlConnection("YourConnectionString")
             Con.Open()
